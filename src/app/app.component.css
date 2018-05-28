@@ -1,0 +1,16 @@
+.row{
+    clear: both;
+    
+}
+
+.columnA{
+    width: 20%;
+    float: left;
+    height: 300px;
+}
+
+.columnB{
+    width: 80%;
+    float: left;
+    height: 300px;
+}
