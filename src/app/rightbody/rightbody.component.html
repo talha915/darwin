@@ -5,30 +5,42 @@
     </h3>
     <div class="row">
       <div class="columnA">
-        <input type="text" size="25" style="background-color: gray">
+        <input type="text" size="25" style="background-color: gray; color: white" placeholder="Search Models">
       </div>
       <div class="columnA">
-        <div class="dropdown">
-          <a class="dropbtn" href="#">Show All</a>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </div>
+        <select name="showall">
+          <option value="showall">
+            Show All
+          </option>
+          <option value="value1">
+            Value1
+          </option>
+          <option value="value1">
+            Value2
+          </option>
+          <option value="value1">
+            Value3
+          </option>
+        </select>
       </div>
       <div class="columnA">
-        <div class="dropdown">
-          <a class="dropbtn" href="#">Most Recent</a>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </div>
+        <select name="recent">
+          <option value="mostrecent">
+            Most Recent
+          </option>
+          <option value="value1">
+            Value1
+          </option>
+          <option value="value1">
+            Value2
+          </option>
+          <option value="value1">
+            Value3
+          </option>
+        </select>
       </div>
     </div>
-    <div class="row" style="padding-top:15px;">
+    <div class="row" style="padding-top:25px;">
       <!-->
       <input type="text" size="120" style="margin-top: 50px; padding: 15px; background-color: grey">
       <-->
@@ -36,18 +48,29 @@
           <h4 class="mytext">
             My Models > [Model for projectX]
           </h4>
-          <div class="mytext" style="float:right">
-            <button class="dropbtn1">Actions</button>
+          <div class="mytext" style="float:right; ">
+            <span>
+                <i class="material-icons">&#xe2c7;</i>
+            </span>
+            <span style="margin-bottom: 5px;">
+               &nbsp;&nbsp; <button class="dropbtn1">Create New Model</button>
+            </span>        
           </div>
         </div>
     </div>
-    <div class="row" style="margin-top: 25px;">
-      <div class="columnA">
+    <div class="row" style="padding-top: 5px;">
+      <div class="columnC">
         <a href="#">
           <div class="card">
             <div class="container">
-              <h4 style="color: white">
+              <h5 style="color: white">
                 projectX Model 1
+              </h5>
+              <h4 style="float: right; color: white; padding-top: 15px;">
+                89.43%
+                <p>
+                  Accuracy
+                </p>
               </h4>
               <h6 style="color: white">
                 Inter Values
@@ -62,12 +85,18 @@
           </div>
         </a>
       </div>
-      <div class="columnA">
+      <div class="columnC">
         <a href="#">
           <div class="card">
             <div class="container">
-              <h4 style="color: white">
+              <h5 style="color: white">
                 projectX Model 2
+              </h5>
+              <h4 style="float: right; color: white; padding-top: 15px;">
+                89.43%
+                <p>
+                  Accuracy
+                </p>
               </h4>
               <h6 style="color: white">
                 Inter Values
@@ -82,11 +111,12 @@
           </div>
         </a>
       </div>
-      <div class="columnA">
+      <div class="columnC">
         <a href="#">
           <div class="card">
             <div class="container">
-              <h4 style="color: white">
+              <h4 style="color: white; ">
+                <i class="material-icons">&#xe2c7;</i>
                 Folder 1
               </h4>
               <p style="color: white; padding-top: 75px;">
@@ -96,15 +126,16 @@
           </div>
         </a>
       </div>
-      <div class="columnA">
+      <div class="columnC">
         <a href="#">
           <div class="card">
             <div class="container">
               <h4 style="color: white">
+                <i class="material-icons">&#xe2c7;</i>
                 Folder 2
               </h4>
               <p style="color: white; padding-top: 75px;">
-                3 Models 1 Folders
+                1 Models
               </p>
             </div>
           </div>

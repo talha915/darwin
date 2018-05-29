@@ -1,23 +1,25 @@
-
-.sidebar{
-    
+.sidebar{    
     background-color: #170633;
 }
+
 
 .heading{
     color: yellow;
     text-align: center;
-    padding: 30px;
-}
-.container {
     padding: 20px;
 }
+
+.container {
+    padding: 20px;
+    height: 663px;
+}
+
 .main {
     float:left;
     width:70%;
     padding:0 20px;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     margin-left: 25px;
     margin-top: 3px;
     color: white;

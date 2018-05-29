@@ -4,13 +4,13 @@
 }
 
 .columnA{
-    width: 20%;
+    width: 15%;
     float: left;
     height: 300px;
 }
 
 .columnB{
-    width: 80%;
+    width: 85%;
     float: left;
     height: 300px;
 }
