@@ -5,9 +5,13 @@
     </h3>
     <div class="row">
       <div class="columnA">
-        <input type="text" size="25" style="background-color: gray; color: white" placeholder="Search Models">
+        <input type="text" style="margin-top: 25px; border: none; background-color: gray; color: white ; height: 10px" placeholder="Search Models">
       </div>
+
       <div class="columnA">
+        <!-->
+        <app-dropdown></app-dropdown>
+
         <select name="showall">
           <option value="showall">
             Show All
@@ -21,11 +25,27 @@
           <option value="value1">
             Value3
           </option>
+
         </select>
+        <-->
+          <div class="dropdown">
+            <div style="margin-left: 33px; color: white; font-size: 10px">
+              GOAL
+            </div>
+            <button class="dropbtn">Show All
+              <i class="i" style="margin-left: 15px;"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
       </div>
       <div class="columnA">
+        <!-->
         <select name="recent">
-          <option value="mostrecent">
+          <option value="">
             Most Recent
           </option>
           <option value="value1">
@@ -38,109 +58,111 @@
             Value3
           </option>
         </select>
-      </div>
-    </div>
-    <div class="row" style="padding-top:25px;">
-      <!-->
-      <input type="text" size="120" style="margin-top: 50px; padding: 15px; background-color: grey">
-      <-->
-        <div class="box">
-          <h4 class="mytext">
-            My Models > [Model for projectX]
-          </h4>
-          <div class="mytext" style="float:right; ">
-            <span>
-                <i class="material-icons">&#xe2c7;</i>
-            </span>
-            <span style="margin-bottom: 5px;">
-               &nbsp;&nbsp; <button class="dropbtn1">Create New Model</button>
-            </span>        
+        <-->
+          <div class="dropdown">
+            <div style="margin-left: 33px; color: white; font-size: 10px">
+              SORT BY
+            </div>
+            <button class="dropbtn">Most Recent
+              <i class="i" style="margin-left: 15px;"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
           </div>
+      </div>
+      <div class="row" style="padding-top:25px;">
+        <!-->
+        <input type="text" size="120" style="margin-top: 50px; padding: 15px; background-color: grey">
+        <-->
+          <div class="box">
+            <h6 class="mytext" style="padding-top: 8px">
+              My Models > [Model for projectX]
+            </h6>
+            <div class="mytext" style="float:right; ">
+              <span style="padding-top: 2px;">
+                <i class="material-icons">&#xe2c7;</i>
+              </span>
+              <span>
+                &nbsp;&nbsp;
+                <button class="dropbtn1 ">Create New Model</button>
+              </span>
+            </div>
+          </div>
+      </div>
+      <div class="row" style="padding-top: 5px;">
+        <div class="columnC">
+          <a href="#">
+            <div class="card">
+              <div class="container">
+                <h5 style="float: right; color: white; padding-top: 60px;">
+                  89.43%
+                  <br>Accuracy
+                </h5>
+                <h5 style="color: white">
+                  projectX Model 1
+                  <br> InterValues
+                </h5>
+                <p style="color: grey">
+                  Last Modified
+                  <br>April 8, 2018
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
-    </div>
-    <div class="row" style="padding-top: 5px;">
-      <div class="columnC">
-        <a href="#">
-          <div class="card">
-            <div class="container">
-              <h5 style="color: white">
-                projectX Model 1
-              </h5>
-              <h4 style="float: right; color: white; padding-top: 15px;">
-                89.43%
-                <p>
-                  Accuracy
+        <div class="columnC">
+          <a href="#">
+            <div class="card">
+              <div class="container">
+                <h5 style="float: right; color: white; padding-top: 60px;">
+                  89.43%
+                  <br>Accuracy
+                </h5>
+                <h5 style="color: white">
+                  projectX Model 2
+                  <br> InterValues
+                </h5>
+                <p style="color: grey; font-size: 15px;">
+                  Last Modified
+                  <br>April 8, 2018
                 </p>
-              </h4>
-              <h6 style="color: white">
-                Inter Values
-              </h6>
-              <p style="color: grey">
-                Last Modified
-              </p>
-              <p style="color: grey">
-                April 8, 2018
-              </p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      <div class="columnC">
-        <a href="#">
-          <div class="card">
-            <div class="container">
-              <h5 style="color: white">
-                projectX Model 2
-              </h5>
-              <h4 style="float: right; color: white; padding-top: 15px;">
-                89.43%
-                <p>
-                  Accuracy
+          </a>
+        </div>
+        <div class="columnC">
+          <a href="#">
+            <div class="card">
+              <div class="container">
+                <h4 style="color: white; ">
+                  <i class="material-icons">&#xe2c7;</i>
+                  Folder 1
+                </h4>
+                <p style="color: white; padding-top: 45px;">
+                  3 Models 1 Folders
                 </p>
-              </h4>
-              <h6 style="color: white">
-                Inter Values
-              </h6>
-              <p style="color: grey">
-                Last Modified
-              </p>
-              <p style="color: grey">
-                April 8, 2018
-              </p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      <div class="columnC">
-        <a href="#">
-          <div class="card">
-            <div class="container">
-              <h4 style="color: white; ">
-                <i class="material-icons">&#xe2c7;</i>
-                Folder 1
-              </h4>
-              <p style="color: white; padding-top: 75px;">
-                3 Models 1 Folders
-              </p>
+          </a>
+        </div>
+        <div class="columnC">
+          <a href="#">
+            <div class="card">
+              <div class="container">
+                <h4 style="color: white">
+                  <i class="material-icons">&#xe2c7;</i>
+                  Folder 2
+                </h4>
+                <p style="color: white; padding-top: 45px;">
+                  1 Models
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      <div class="columnC">
-        <a href="#">
-          <div class="card">
-            <div class="container">
-              <h4 style="color: white">
-                <i class="material-icons">&#xe2c7;</i>
-                Folder 2
-              </h4>
-              <p style="color: white; padding-top: 75px;">
-                1 Models
-              </p>
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>

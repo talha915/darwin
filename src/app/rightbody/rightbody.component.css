@@ -42,21 +42,23 @@ a:hover{
 }
 
 .dropbtn {
-    background-color: #766ea0;
+    background-color: #372354;
     color: white;
     padding: 3px;
     font-size: 16px;
     border: none;
     margin-left: 30px;
+    border-bottom: 2px solid gray;
 }
 
 .dropbtn1 {
     background-color: aqua;
     color: white;
-    padding: 3px;
     font-size: 16px;
     border: none;
-    margin-top: -10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
     margin-right: 5px;
 }
 
@@ -88,15 +90,14 @@ a:hover{
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #766ea0;
+    background-color: #372354;
 }
 
 
 .card {
     width: 267px;
-    height: 160px;
+    height: 135px;
     background-color: rgb(93, 74, 105);
-    
     padding-right: 10px;
     margin-top:15px;
 }
@@ -105,12 +106,13 @@ a:hover{
     background-color: grey;
     height: 50px;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 45px;
 }
 
 .mytext{
     color: white;
-    margin-top: -5px;
+    margin-top: 1px;
     padding-left: 15px;
     float: left;
 }
@@ -125,7 +127,9 @@ select {
     margin-left: 30px;
     margin-top: 25px;
 }
-
+option {
+    color: black;
+}
 input[type=text]{
     width: 100%;
     padding: 12px 20px;
@@ -135,3 +139,13 @@ input[type=text]{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.i{
+    border: solid olive;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
