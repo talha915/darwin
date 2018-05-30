@@ -1,7 +1,7 @@
 .sidebar{    
     background-color: #170633;
+    height: 680px;
 }
-
 
 .heading{
     color: yellow;
@@ -10,7 +10,7 @@
 }
 
 .container {
-    padding: 20px;
+    padding: 5px;
     height: 663px;
 }
 
@@ -27,8 +27,17 @@ a:link {
     text-decoration: none;
 }
 
+a{
+    border-left:4px solid transparent;
+}
+
 a:hover{
   background-color: #0c0319; 
+  border-left:4px solid gold;  
+}
+
+a:hover .columnA{
+    background-color: gold;
 }
 
 .footer{

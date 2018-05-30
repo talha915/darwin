@@ -1,6 +1,6 @@
 .rightbody{
     background-color: #372354;
-    height: 663px;
+    height: 680px;
 }
 
 h3{
@@ -12,9 +12,9 @@ h3{
 
 .columnA{
     width: 20%;
-    float: left;
-    
+    float: left;    
 }
+
 a:link {
     text-decoration: none;
 }
@@ -83,7 +83,7 @@ a:hover{
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {background-color: rgb(78, 12, 12)}
 
 .dropdown:hover .dropdown-content {
     display: block;
