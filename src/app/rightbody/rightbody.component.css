@@ -13,8 +13,7 @@
 
 
 @media only screen and (min-width: 794px){
-    .rightbody{
-        
+    .rightbody{  
         height: 1000px;
     }
     .columnC{
@@ -35,7 +34,7 @@
 @media only screen and (min-width: 1300px){
     .rightbody{
         
-        height: 1000px;
+       
     }
     .columnC{
         width: 25% !important;
@@ -272,7 +271,7 @@ a:hover{
 
 .columnC{
     width: 250px;
-    float: left;
+    display: inline-block;
 }
 
 .container{
