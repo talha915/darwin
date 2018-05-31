@@ -3,6 +3,246 @@
     height: 680px;
 }
 
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .columnC{
+        width: 25% !important;
+    }
+}
+
+
+
+@media only screen and (min-width: 794px){
+    .rightbody{
+        
+        height: 1000px;
+    }
+    .columnC{
+        width: 50% !important;
+    }
+}
+
+@media only screen and (min-width: 1224px){
+    .rightbody{
+        
+        height: 1000px;
+    }
+    .columnC{
+        width: 30% !important;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .rightbody{
+        
+        height: 1000px;
+    }
+    .columnC{
+        width: 25% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .rightbody{
+        height: 1000px;
+    }
+    .container{
+        width: 100%;
+    }
+    .columnA{
+        width: 100% !important;
+    }
+    .columnC{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait){
+    .container{
+        width: 100%;
+    }
+    .columnA{
+        width: 100% !important;
+    }
+    .columnC{
+        width: 100% !important;
+    }
+}
+/*@media only screen and (max-width: 600px){
+    .rightbody{
+        width: 100%;
+        height: 1020px !important;
+    }
+    .container{
+        width: 100%;
+    }
+    .box{
+        width: 100% !important;
+    }
+    .row{
+        width: 100%;
+    }
+    .columnA{
+        width: 85% !important;
+    }
+    .dropbtn{
+        margin-top: 25px !important;
+    }
+    .dropdown{
+        margin-top: 15px;
+    }
+    .columnC{
+        width: 100% !important;
+    }
+}
+@media only screen and (min-width: 600px){
+    .rightbody{
+        width: 100%;   
+    }
+    .container{
+        width: 100%;
+    }
+    .box{
+        width: 100% !important;
+    }
+    .row{
+        width: 100%;
+    }
+    .columnA{
+        width: 25% !important;
+        
+    }
+    .dropbtn{
+        margin-top: 25px !important;
+    }
+    .dropdown{
+        margin-top: 15px;
+    }
+    .columnC{
+        width: 25% !important;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .rightbody{
+        
+    }
+}*/
+/*@media only screen and (max-width: 411px){
+    .columnC{
+        width: 100% !important;
+        margin-left: 30px !important;
+    }
+    .card{
+        width: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .rightbody{
+        width: 100%;
+    }
+    .columnC{
+        width: 100% !important;
+        margin-left: 2px !important;
+    }
+    .card{
+        width: 250px !important;
+        margin-right: 250px !important;
+    }
+}
+@media only screen and (max-width: 320px){
+    .rightbody{
+        width: 100%;
+    }
+    .columnC{
+        width: 80% !important;
+    }
+    .card{
+        width: 250px !important;
+    }
+}
+
+@media only screen and (min-width: 360px){
+    .columnC{
+        width: 80% !important;
+        margin-right: 60px !important;
+    }
+    .card{
+        width: 250px !important;
+        margin-right: 60px !important;
+    }
+}
+
+@media only screen and (min-width: 414px){
+    .columnC{
+        width: 80% !important;
+        margin-left: 25px !important;
+    }
+    .card{
+        width: 250px !important;
+        margin-left: 2px !important;
+        padding-left: 2px !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .rightbody{
+        width: 100%;
+        height: 1050px !important;
+    }
+    .container{
+        width: 100%;
+    }
+    .box{
+        width: 100% !important;
+    }
+    .row{
+        width: 100%;
+    }
+    .columnA{
+        width: 100% !important;
+    }
+    .dropbtn{
+        margin-top: 25px !important;
+    }
+    .columnC{
+        width: 100% !important;
+        margin-left: 200px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 1024px){
+    .rightbody{
+        width: 100%;
+        height: 1000px !important;
+    }
+    .container{
+        width: 100%;
+    }
+    .box{
+        width: 90% !important;
+    }
+    .row{
+        width: 100%;
+    }
+    .columnA{
+        width: 100% !important;
+    }
+    .dropbtn{
+        margin-top: 25px !important;
+    }
+    .dropdown{
+        margin-top: 15px;
+    }
+    .columnC{
+        width: 100% !important;
+        margin-left: 200px !important;
+    }
+}*/
+
 h3{
     color: white;
 }
@@ -12,7 +252,8 @@ h3{
 
 .columnA{
     width: 20%;
-    float: left;    
+    float: left;  
+    
 }
 
 a:link {
@@ -30,7 +271,7 @@ a:hover{
 }
 
 .columnC{
-    width: 25%;
+    width: 250px;
     float: left;
 }
 
@@ -95,7 +336,7 @@ a:hover{
 
 
 .card {
-    width: 267px;
+    width: 257px;
     height: 135px;
     background-color: rgb(93, 74, 105);
     padding-right: 10px;

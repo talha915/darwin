@@ -3,6 +3,89 @@
     height: 680px;
 }
 
+@media only screen and (max-width: 600px){
+    .sidebar{
+        height: 1020px !important;
+    }
+    .heading{
+        color: white !important;
+        padding: 1px !important;
+        font-size: 10px !important;
+    }
+    .main{
+        padding: 8px !important;
+        font-size: 10px !important;
+    }
+    a{
+        padding: 15px !important;
+        font-size: 10px !important;
+    }
+    p{
+        padding: 15px !important;
+        font-size: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .heading{
+        color: white !important;
+        padding: 1px !important;
+        font-size: 8px !important;
+    }
+    .main{
+        padding: 8px !important;
+        font-size: 5px !important;
+    }
+    a{
+        padding: 1px !important;
+        font-size: 5px !important;
+    }
+    p{
+        padding: 1px !important;
+        font-size: 8px !important;
+        text-align: center !important;
+    }
+    .footer{
+        padding-top: 850px !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .sidebar{
+        height: 1050px !important;
+    }
+    .heading{
+        color: yellow !important;
+        padding: 8px !important;
+        font-size: 8px !important;
+    }
+    .main{
+        padding: 2px !important;
+        font-size: 8px !important;
+    }
+    a{
+        padding: 2px !important;
+        font-size: 8px !important;
+    }
+    p{
+        padding: 2px !important;
+        font-size: 8px !important;
+        text-align: center !important;
+    }
+    .footer{
+        padding-top: 850px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .sidebar{
+        height: 1000px !important;
+    }
+    .footer{
+        padding-top: 750px !important; 
+    }
+}
+
 .heading{
     color: yellow;
     text-align: center;
