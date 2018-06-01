@@ -252,11 +252,27 @@ h3{
 .columnA{
     width: 20%;
     float: left;  
-    
 }
 
+b{
+    opacity: 0.0;
+}
+
+b i{
+    opacity: 0.0;
+}
+
+a:hover b{
+    opacity: 1;
+}
+a:hover b i {
+    opacity: 1;
+}
+a:hover .card{
+    border: 1px solid rgb(139, 131, 8);
+}
 a:link {
-    text-decoration: none;
+    text-decoration: none;    
 }
 
 a:hover{
@@ -275,10 +291,12 @@ a:hover{
 }
 
 .container{
-    padding: 5px;
-    padding-right: 15px;
-    margin-bottom: 15px;
-    
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.container .span{
+    padding-top: 1px;
 }
 
 .dropbtn {
@@ -336,11 +354,13 @@ a:hover{
 
 .card {
     width: 257px;
-    height: 135px;
+    height: 155px;
     background-color: rgb(93, 74, 105);
     padding-right: 10px;
     margin-top:15px;
 }
+
+
 
 .box{
     background-color: grey;
