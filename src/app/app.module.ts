@@ -11,10 +11,12 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     AppComponent,
     SidebarComponent,
     RightbodyComponent,
-    DropdownComponent
+    DropdownComponent,
+   
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

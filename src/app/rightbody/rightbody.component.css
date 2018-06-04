@@ -318,6 +318,7 @@ a:hover{
     justify-content: center;
     align-self: stretch;
     margin-right: 5px;
+    padding: 8px;
 }
 
 .dropdown {
@@ -334,14 +335,15 @@ a:hover{
     z-index: 1;
 }
 
+
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 1px 1px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {background-color: rgb(78, 12, 12)}
+.dropdown-content a:hover {background-color: rgb(197, 166, 166)}
 
 .dropdown:hover .dropdown-content {
     display: block;
