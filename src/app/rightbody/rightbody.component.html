@@ -84,6 +84,9 @@
               My Models > [Model for projectX]
             </h6>
             <div class="mytext" style="float:right; ">
+              <span *ngIf="itemSelected>0">
+                {{itemSelected}} Selected
+              </span>
               <span>
                 <i class="material-icons">&#xe2c7;</i>
               </span>
@@ -93,12 +96,25 @@
               </span>
               <span *ngIf="itemSelected>0">
                 &nbsp;&nbsp;
+                <!-->
                 <a href="#" class="dropbtn1">Actions </a>
+                <-->
+                  <div class="dropdown">
+                    <button class="dropbtn" style="background-color: aqua; text-align: center;">Actions
+                      <i class="i" style="margin-left: 15px; color: white;"></i>
+                    </button>
+                    <div class="dropdown-content" style="margin-left: 30px">
+                      <a href="#">Move to...</a>
+                      <a href="#">Deselect All</a>
+                    </div>
+                  </div>
               </span>
-              <!--><span *ngIf="itemSelected > 0">
-                &nbsp;&nbsp;  *ngIf="itemitemSelected == 0"
+              <!-->
+              <span *ngIf="itemSelected > 0">
+                &nbsp;&nbsp; *ngIf="itemitemSelected == 0"
                 <a href="#" class="dropbtn1">Actions</a>
-              </span><-->
+              </span>
+              <-->
             </div>
           </div>
       </div>
@@ -109,7 +125,7 @@
               <b>
                 <input type="checkbox" (click)="myfunct();" name="mycheck">
               </b>
-              
+
               <b>
                 <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
                   <a>
@@ -156,7 +172,7 @@
           <a href="#">
             <div class="card">
               <b>
-                <input type="checkbox"  name="mycheck">
+                <input type="checkbox" (click)="myfunct();" name="mycheck">
               </b>
               <b>
                 <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
@@ -164,7 +180,7 @@
                     <i class="fa fa-ellipsis-v" style="float: right; color: white;"></i>
                   </a>
                   <div class="dropdown-content">
-                    
+
                     <a href="#">Move To</a>
                     <a href="#">Rename</a>
                     <a href="#">Remove</a>
@@ -234,5 +250,3 @@
       </div>
     </div>
   </div>
-
-  
