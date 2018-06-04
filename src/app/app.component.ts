@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Popup } from 'ng2-opd-popup';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

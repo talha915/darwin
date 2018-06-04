@@ -11,5 +11,9 @@ export class RightbodyComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  myfunct(){
+    this.itemSelected=1;
+    console.log(this.itemSelected);
+    return this.itemSelected;
+  }
 }

@@ -87,9 +87,13 @@
               <span>
                 <i class="material-icons">&#xe2c7;</i>
               </span>
-              <span >
+              <span *ngIf="itemSelected==0">
                 &nbsp;&nbsp;
                 <a href="#" class="dropbtn1">Create New Model</a>
+              </span>
+              <span *ngIf="itemSelected>0">
+                &nbsp;&nbsp;
+                <a href="#" class="dropbtn1">Actions </a>
               </span>
               <!--><span *ngIf="itemSelected > 0">
                 &nbsp;&nbsp;  *ngIf="itemitemSelected == 0"
@@ -103,8 +107,9 @@
           <a href="#">
             <div class="card">
               <b>
-                <input type="checkbox" name="mycheck">
+                <input type="checkbox" (click)="myfunct();" name="mycheck">
               </b>
+              
               <b>
                 <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
                   <a>
@@ -229,3 +234,5 @@
       </div>
     </div>
   </div>
+
+  
