@@ -9,6 +9,7 @@
     </div>
     <div class="modal-body">
       <div class="container">
+        <!-->
         <div>
           <span>
             <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
@@ -105,6 +106,22 @@
             <a style="color: white;">Folder 9</a>
           </span>
         </div>
+        <-->
+          <div *ngFor="let folder of folders">
+            <p style="color: white">
+                <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>{{folder.folder}}
+              <br>
+              <a href="#">
+                  &nbsp;&nbsp; 
+                  <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i> {{folder.subfolder}}
+              </a>
+              <br>
+              <a href="#">
+                &nbsp;&nbsp; 
+                <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i> {{folder.subfolder1}}
+              </a>
+            </p>
+          </div>
       </div>
     </div>
     <div class="modal-footer">

@@ -65,3 +65,7 @@
     width: 550px;
     height: 320px;
 }
+
+a{
+    text-decoration: none;
+}
