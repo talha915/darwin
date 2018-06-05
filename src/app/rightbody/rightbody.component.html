@@ -104,6 +104,9 @@
                       <i class="i" style="margin-left: 15px; color: white;"></i>
                     </button>
                     <div class="dropdown-content" style="margin-left: 30px">
+                      <button (click)="showConfirm()">
+                        Move
+                      </button>
                       <a href="#">Move to...</a>
                       <a href="#">Deselect All</a>
                     </div>
@@ -122,8 +125,8 @@
         <div class="columnC">
           <a href="#">
             <div class="card">
-              <b>
-                <input type="checkbox" (click)="myfunct();" name="mycheck">
+              <b >
+                <input type="checkbox" (click)="myfunct();"  name="mycheck">
               </b>
 
               <b>
@@ -250,3 +253,6 @@
       </div>
     </div>
   </div>
+
+
+  

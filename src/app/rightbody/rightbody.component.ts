@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {DialogComponent, DialogService} from 'ng2-bootstrap-modal';
+import { DialogueComponentComponent } from '../dialogue-component/dialogue-component.component';
 
 @Component({
   selector: 'app-rightbody',
@@ -7,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightbodyComponent implements OnInit {
   private itemSelected:number = 0;
-  constructor() { }
-
+  constructor(private dialogService:DialogService) {}
+  showConfirm() {
+    let disposable = this.dialogService.addDialog(DialogueComponentComponent); 
+  }
   ngOnInit() {
   }
   myfunct(){
