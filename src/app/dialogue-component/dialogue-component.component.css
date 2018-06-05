@@ -2,6 +2,8 @@
     position: relative;
     width: auto;
     margin: 10px;
+    height: 450px;
+    
 }
  
 .modal.in .modal-dialog {
@@ -36,6 +38,7 @@
     border: none;
     margin-left: 350px;
     margin-bottom: 5px;
+    margin-top: 40px;
 }
 
 .movebutton{
@@ -45,5 +48,20 @@
     padding: 5px;
     border: none;
     margin-left: 5px;
-    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+.headercontainer{
+    background-color: gray;
+    width: 100%;
+    height: 25px;
+}
+
+.container{
+    background-color: gray;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+    width: 550px;
+    height: 320px;
 }

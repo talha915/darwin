@@ -1,6 +1,6 @@
 .modal {
     position: fixed;
-    top: 25px;
+    top: 55px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -25,7 +25,7 @@
 .modal-dialog {
     position: relative;
     width: auto;
-    margin: 10px;
+    margin: 20px;
 }
  
 .modal.in .modal-dialog {
@@ -50,6 +50,6 @@
         width: 600px;
         margin: 30px auto;
         background-color: #170633;
-        
+ 
     }
 }
