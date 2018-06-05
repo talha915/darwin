@@ -1,6 +1,6 @@
 .rightbody{
     background-color: #372354;
-    height: 680px;
+    height: 480px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -23,7 +23,6 @@
 
 @media only screen and (min-width: 1224px){
     .rightbody{
-        
         height: 1000px;
     }
     .columnC{
@@ -32,9 +31,8 @@
 }
 
 @media only screen and (min-width: 1300px){
-    .rightbody{
-        
-       
+    .rightbody{   
+       height: 680px;
     }
     .columnC{
         width: 25% !important;
@@ -439,7 +437,7 @@ input[type=text]{
 .material-icons{
     font-size: 18px;
 }
-/*Without Bootstrap*/
+/*Without Bootstrap
 .modal {
     position: fixed;
     top: 0;
@@ -491,4 +489,4 @@ input[type=text]{
         width: 600px;
         margin: 30px auto;
     }
-}
+}*/
