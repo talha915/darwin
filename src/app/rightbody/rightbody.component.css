@@ -318,6 +318,7 @@ a:hover{
     justify-content: center;
     align-self: stretch;
     margin-right: 5px;
+    margin-top: 15px;
     padding: 8px;
 }
 
@@ -367,7 +368,7 @@ a:hover{
 .box{
     background-color: grey;
     height: 50px;
-    width: 100%;
+    width: 98.5%;
     padding-top: 5px;
     padding-bottom: 45px;
 }
@@ -427,6 +428,17 @@ input[type=text]{
     -webkit-transform: rotate(45deg);
 }
 
+.boxdropbtn {
+    background-color: aqua;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-right: 15px;
+    padding: 6px;
+}
+.material-icons{
+    font-size: 18px;
+}
 /*Without Bootstrap*/
 .modal {
     position: fixed;

@@ -1,18 +1,21 @@
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-</head>
+
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-      <button type="button" class="close" (click)="close()">&times;</button>
-      <h4 class="modal-title">agfjas</h4>
+      <span>
+          <h4 class="modal-title" style="text-align: center;color: white;">Move X Components to
+              <a class="close" style="margin-left: 350px;color: white;"(click)="close()">&times;</a>
+          </h4>
+          
+          <!--><button type="button" style="margin-top: 1px;" class="close" (click)="close()">&times;</button><-->
+      </span>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" style="text-align: center">
       <p>fhqlfhqwf</p>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="confirm()">OK</button>
-      <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
+      <button  class="cancelbutton" (click)="close()">Cancel</button>
+      <button class="movebutton" (click)="confirm()">Move</button>
     </div>
   </div>
 </div>

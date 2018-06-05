@@ -88,7 +88,7 @@
                 {{itemSelected}} Selected
               </span>
               <span>
-                <i class="material-icons">&#xe2c7;</i>
+                <i class="material-icons" style="margin-top:5px;">&#xe2c7;</i>
               </span>
               <span *ngIf="itemSelected==0">
                 &nbsp;&nbsp;
@@ -100,14 +100,11 @@
                 <a href="#" class="dropbtn1">Actions </a>
                 <-->
                   <div class="dropdown">
-                    <button class="dropbtn" style="background-color: aqua; text-align: center;">Actions
+                    <button class="boxdropbtn" style="background-color: aqua; text-align: center;">Actions
                       <i class="i" style="margin-left: 15px; color: white;"></i>
                     </button>
                     <div class="dropdown-content" style="margin-left: 30px">
-                      <button (click)="showConfirm()">
-                        Move
-                      </button>
-                      <a href="#">Move to...</a>
+                      <a (click)="showConfirm()">Move to...</a>
                       <a href="#">Deselect All</a>
                     </div>
                   </div>
