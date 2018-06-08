@@ -7,6 +7,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RightbodyComponent } from './rightbody/rightbody.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DialogueComponentComponent } from './dialogue-component/dialogue-component.component';
+import { DialogueCreateComponent } from './dialoguecreate/dialoguecreate.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DialogueComponentComponent } from './dialogue-component/dialogue-compon
     RightbodyComponent,
     DropdownComponent,
     DialogueComponentComponent,
+    DialogueCreateComponent,
    
   ],
   imports: [
@@ -23,7 +25,8 @@ import { DialogueComponentComponent } from './dialogue-component/dialogue-compon
     BootstrapModalModule.forRoot({container:document.body})
   ],
   entryComponents: [
-    DialogueComponentComponent
+    DialogueComponentComponent,
+    DialogueCreateComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {DialogComponent, DialogService} from 'ng2-bootstrap-modal';
 import { DialogueComponentComponent } from '../dialogue-component/dialogue-component.component';
-
+import { DialogueCreateComponent } from '../dialoguecreate/dialoguecreate.component';
 @Component({
   selector: 'app-rightbody',
   templateUrl: './rightbody.component.html',
@@ -13,6 +13,9 @@ export class RightbodyComponent implements OnInit {
   constructor(private dialogService:DialogService) {}
   showConfirm() {
     let disposable = this.dialogService.addDialog(DialogueComponentComponent); 
+  }
+  myconfirm() {
+    let disposable = this.dialogService.addDialog(DialogueCreateComponent); 
   }
   ngOnInit() {
   }

@@ -1,0 +1,28 @@
+<div class="modal-dialog">
+  <div class="modal-content" style="margin-top: 150px;">
+    <div class="modal-header" style="background-color: gray; ">
+      <span style="color: white; ">
+        <h4 style="padding-left: 15px;">Create New Folder
+            <a class="close" style="margin-left: 290px;color: white; " (click)="close()">&times;</a>
+        </h4>
+      </span>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div style="margin-left: 25px;">
+          <span style="color: white">
+            Folder Name
+          </span>
+          <br>
+          <span>
+            <input type="text" style="border-radius: 2px" size="25">
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="cancelbutton" (click)="close()">Cancel</button>
+      <button class="createbutton" (click)="confirm()">Create</button>
+    </div>
+  </div>
+</div>

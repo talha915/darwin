@@ -88,7 +88,9 @@
                 {{itemSelected}} Selected
               </span>
               <span>
-                <i class="material-icons" style="margin-top:5px;">&#xe2c7;</i>
+                <a (click)="myconfirm()">
+                  <i class="material-icons" style="margin-top:5px;">&#xe2c7;</i>
+                </a>
               </span>
               <span *ngIf="itemSelected==0">
                 &nbsp;&nbsp;
