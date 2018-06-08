@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <div class="modal-dialog">
   <div class="modal-content" style="margin-top: 150px">
     <div class="modal-header" style="background-color: gray">
@@ -108,28 +111,30 @@
         </div>
         <-->
           <div *ngFor="let folder of folders">
-            <div *ngIf="folder.folder" style="color: white">
+            <span *ngIf="folder.folder" style="color: white">
               <a href="#">
                 <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>{{folder.folder}}
               </a>
-            </div>
-            <a href="#">
-              &nbsp;&nbsp;
-              <div *ngIf="folder.subfolder" style="color: white">
-                <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i> {{folder.subfolder}}
-              </div>
-            </a>
-            <div *ngIf="folder.subfolder1" style="color: white">
-              <a href="#">
-                &nbsp;&nbsp;
-                <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i> {{folder.subfolder1}}
-              </a>
-            </div>
-            <div *ngIf="folder.subfolder2" style="color: white">
-              <a href="#">
-                &nbsp;&nbsp;
-                <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i> {{folder.subfolder2}}
-              </a>
+            </span>
+            <div *ngFor="let subfolders of folder.subfolders" style="color: white">
+              <span *ngIf="subfolders.subfolder">
+                <a href="#">
+                    &nbsp;&nbsp;<i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder}}
+                  <br>
+                </a>
+              </span>
+              <span *ngIf="subfolders.subfolder1">
+                <a href="#">
+                    &nbsp;&nbsp;<i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder1}}
+                  <br>
+                </a>
+              </span>
+              <span *ngIf="subfolders.subfolder2">
+                <a href="#">
+                    &nbsp;&nbsp;<i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder2}}
+                  <br>
+                </a>
+              </span>
             </div>
           </div>
       </div>
