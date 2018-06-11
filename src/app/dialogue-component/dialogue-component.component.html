@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <div class="modal-dialog">
   <div class="modal-content" style="margin-top: 150px">
@@ -13,103 +13,31 @@
     <div class="modal-body">
       <div class="container">
         <!-->
-        <div>
-          <span>
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
+        <div *ngFor="let name of folders" style="color: white">
+          <a href="#">
             &nbsp;&nbsp;
-            <b style="color: white;">My Models</b>
-          </span>
-        </div>
-        <div>
-          <span>
-            &nbsp;&nbsp;
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <a style="color: white;">Folder 1</a>
-          </span>
-        </div>
-        <div>
-          <span>
-            &nbsp;&nbsp;
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <a href="#" style="color: white;">Folder 2</a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <b style="color: white;">Folder 3</b>
-          </span>
-        </div>
-        <div>
-          <span>
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <b style="color: white;">Folder 4</b>
-          </span>
-        </div>
-        <div>
-          <span>
-            &nbsp;&nbsp;
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <a style="color: white;">Folder 5</a>
-          </span>
-        </div>
-        <div>
-          <span>
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <b style="color: white;">Folder 6</b>
-          </span>
-        </div>
-        <div>
-          <span>
-            &nbsp;&nbsp;
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <a style="color: white;">Folder 7</a>
-          </span>
-        </div>
-        <div>
-          <span>
-            &nbsp;&nbsp;
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <a style="color: white;">Folder 8</a>
-          </span>
-        </div>
-        <div>
-          <span>
-            &nbsp;&nbsp;
-            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>
-          </span>
-          <span>
-            &nbsp;&nbsp;
-            <a style="color: white;">Folder 9</a>
-          </span>
+            <i class="material-icons" style="color: white; font-size: 12px;">&#xe2c7;</i>{{name.name}}
+            <br>
+          </a>
+
         </div>
         <-->
+
+          <ng-template #recursiveList let-list>
+            <ul>
+              <li *ngFor="let items of list">
+                {{items.name}}
+                <div *ngIf="items.childs.length > 0">
+                  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: items.childs}"></ng-container>
+                </div>
+              </li>
+            </ul>
+
+          </ng-template>
+          <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: folders }"></ng-container>
+
+
+          <!-->
           <div *ngFor="let folder of folders">
             <span *ngIf="folder.folder" style="color: white">
               <a href="#">
@@ -119,47 +47,57 @@
             <div *ngFor="let subfolders of folder.subfolders" style="color: white">
               <span *ngIf="subfolders.subfolder">
                 <a href="#">
-                    &nbsp;&nbsp;<i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder}}
+                  &nbsp;&nbsp;
+                  <i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder}}
                   <br>
                 </a>
               </span>
-              <span *ngIf="subfolders.subfolder1">
-                <a href="#">
-                    &nbsp;&nbsp;<i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder1}}
-                  <br>
-                </a>
-              </span>
-              <span *ngIf="subfolders.subfolder2">
-                <a href="#">
-                    &nbsp;&nbsp;<i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder2}}
-                  <br>
-                </a>
-              </span>
+              <div *ngFor="let child of subfolders.child">
+                <span *ngIf="child.name">
+                  <a href="#">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-plus-square" style="font-size: 12px;"></i>{{child.name}}
+                    <br>
+                  </a>
+                </span>
+              </div>
             </div>
+            <-->
+              <!-->
+              <div *ngFor="let subfolders of folder.subfolders" style="color: white">
+                <span *ngIf="subfolders.subfolder">
+                  <a href="#">
+                    &nbsp;&nbsp;
+                    <i class="fa fa-plus-square" style="font-size: 12px;"></i>{{subfolders.subfolder}}
+                    <br>
+                  </a>
+                </span>
+              </div>
+              <-->
+
           </div>
       </div>
-    </div>
-    <div class="modal-footer">
-      <button class="cancelbutton" (click)="close()">Cancel</button>
-      <button class="movebutton" (click)="confirm()">Move</button>
+      <div class="modal-footer">
+        <button class="cancelbutton" (click)="close()">Cancel</button>
+        <button class="movebutton" (click)="confirm()">Move</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-->
-<div class="modal-dialog">
-  <div class="modal-content" style="margin-top: 150px;">
-    <div class="modal-header">
-      <button type="button" class="close" (click)="close()">&times;</button>
-      <h4 class="modal-title">{{title || 'Confirm'}}</h4>
-    </div>
-    <div class="modal-body">
-      <p>gg</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary" (click)="confirm()">OK</button>
-      <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
+  <!-->
+  <div class="modal-dialog">
+    <div class="modal-content" style="margin-top: 150px;">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="close()">&times;</button>
+        <h4 class="modal-title">{{title || 'Confirm'}}</h4>
+      </div>
+      <div class="modal-body">
+        <p>gg</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="confirm()">OK</button>
+        <button type="button" class="btn btn-default" (click)="close()">Cancel</button>
+      </div>
     </div>
   </div>
-</div>
-<-->
+  <-->

@@ -22,33 +22,71 @@
 
 export const Data=[
     {
-        folder: 'My Models',
-        subfolders: [
+        name: 'My Models',
+        childs: [
             {
-                subfolder: 'Folder 1',
-                subfolder1: 'Folder 2'
+                name: 'Folder 1',
+                childs: [
+                    {
+                        name: 'Child 1',
+                        childs:[]
+                    }
+                ]
+            },
+            {
+                name: 'Folder 2',
+                childs: [
+                    {
+                        name: 'Child 2',
+                        childs:[]
+                    }
+                ]
             }
         ]
     },
     {
-        folder: 'Folder 3'
+        name: 'Folder 3',
+        childs:[]
     },
     {
-        folder: 'Folder 4',
-        subfolders: [
+        name: 'Folder 4',
+        childs: [
             {
-                subfolder: 'Folder 5'
+                name: 'Folder 5',
+                childs:[]
             }
         ]
     },
     {
-        folder: 'Folder 6',
-        subfolders:[
+        name: 'Folder 6',
+        childs: [
             {
-                subfolder: 'Folder 7',
-                subfolder1: 'Folder 8',
-                subfolder2: 'Folder 9'
-            }
+                name: 'Folder 7',
+                childs: [
+                    {
+                        name: 'Child 1',
+                        childs:[]
+                    },
+                ]
+            },
+            {
+                name: 'Folder 8',
+                childs: [
+                    {
+                        name: 'Child 2',
+                        childs:[]
+                    }
+                ]
+            },
+            {
+                name: 'Folder 9',
+                childs: [
+                    {
+                        name: 'Child 3',
+                        childs:[]
+                    }
+                ]
+            },
         ]
     }
 ];
