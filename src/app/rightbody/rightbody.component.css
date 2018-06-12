@@ -489,3 +489,11 @@ input[type=text]{
         margin: 30px auto;
     }
 }*/
+
+i{
+    cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+}

@@ -22,11 +22,9 @@
 
         </div>
         <-->
-        <a href="#">
+      
         <ng-template #recursiveList let-list>
-          
             <ul style="color: white">
-                
               <li *ngFor="let items of list">
                 <i class="fa fa-plus-square" style="font-size: 12px; float: left; padding-top: 5px; padding-right: 15px"></i>
                 <i class="material-icons" style="color: white; font-size: 12px; padding-right: 5px">&#xe2c7;</i>{{items.name}}
@@ -35,10 +33,9 @@
                 </div>
               </li>
             </ul>
-          
         </ng-template>
         <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: folders }"></ng-container>
-      </a>  
+ 
         <!-->
           <div *ngFor="let folder of folders">
             <span *ngIf="folder.folder" style="color: white">
@@ -65,7 +62,7 @@
               </div>
             </div>
             <-->
-              <!-->
+        <!-->
               <div *ngFor="let subfolders of folder.subfolders" style="color: white">
                 <span *ngIf="subfolders.subfolder">
                   <a href="#">

@@ -22,6 +22,9 @@ export class RightbodyComponent implements OnInit {
   }
   myfunct(){
     this.itemSelected= this.itemSelected + 1;
+    if(this.itemSelected>2){
+      this.itemSelected--;
+    }
     console.log(this.itemSelected);
     return this.itemSelected;
   }
