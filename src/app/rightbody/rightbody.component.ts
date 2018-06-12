@@ -13,6 +13,7 @@ export class RightbodyComponent implements OnInit {
   constructor(private dialogService:DialogService) {}
   showConfirm() {
     let disposable = this.dialogService.addDialog(DialogueComponentComponent); 
+    
   }
   myconfirm() {
     let disposable = this.dialogService.addDialog(DialogueCreateComponent); 

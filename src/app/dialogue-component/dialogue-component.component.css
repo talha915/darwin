@@ -3,7 +3,7 @@
     width: auto;
     margin: 10px;
     height: 450px;
-    
+    z-index: -1;
 }
  
 .modal.in .modal-dialog {
@@ -38,7 +38,7 @@
     border: none;
     margin-left: 350px;
     margin-bottom: 5px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .movebutton{
@@ -48,7 +48,7 @@
     padding: 5px;
     border: none;
     margin-left: 5px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .headercontainer{
@@ -63,9 +63,13 @@
     margin-right: 25px;
     margin-top: 15px;
     width: 550px;
-    height: 320px;
+    height: 350px;
 }
 
 a{
     text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
 }

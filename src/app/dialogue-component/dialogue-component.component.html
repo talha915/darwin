@@ -22,22 +22,24 @@
 
         </div>
         <-->
-
-          <ng-template #recursiveList let-list>
-            <ul>
+        <a href="#">
+        <ng-template #recursiveList let-list>
+          
+            <ul style="color: white">
+                
               <li *ngFor="let items of list">
-                {{items.name}}
+                <i class="fa fa-plus-square" style="font-size: 12px; float: left; padding-top: 5px; padding-right: 15px"></i>
+                <i class="material-icons" style="color: white; font-size: 12px; padding-right: 5px">&#xe2c7;</i>{{items.name}}
                 <div *ngIf="items.childs.length > 0">
                   <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: items.childs}"></ng-container>
                 </div>
               </li>
             </ul>
-
-          </ng-template>
-          <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: folders }"></ng-container>
-
-
-          <!-->
+          
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: folders }"></ng-container>
+      </a>  
+        <!-->
           <div *ngFor="let folder of folders">
             <span *ngIf="folder.folder" style="color: white">
               <a href="#">
@@ -75,14 +77,14 @@
               </div>
               <-->
 
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button class="cancelbutton" (click)="close()">Cancel</button>
-        <button class="movebutton" (click)="confirm()">Move</button>
       </div>
     </div>
+    <div class="modal-footer">
+      <button class="cancelbutton" (click)="close()">Cancel</button>
+      <button class="movebutton" (click)="confirm()">Move</button>
+    </div>
   </div>
+</div>
 
   <!-->
   <div class="modal-dialog">
