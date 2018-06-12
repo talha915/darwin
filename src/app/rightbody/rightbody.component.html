@@ -11,121 +11,74 @@
         </div>
       </div>
       <div class="columnA">
-        <!-->
-        <app-dropdown></app-dropdown>
-
-        <select name="showall">
-          <option value="showall">
-            Show All
-          </option>
-          <option value="value1">
-            Value1
-          </option>
-          <option value="value1">
-            Value2
-          </option>
-          <option value="value1">
-            Value3
-          </option>
-
-        </select>
-        <-->
-          <div class="dropdown">
-            <div style="margin-left: 33px; color: white; font-size: 10px">
-              GOAL
-            </div>
-            <button class="dropbtn">Show All
-              <i class="i" style="margin-left: 15px;"></i>
-            </button>
-            <div class="dropdown-content" style="margin-left: 30px;">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+        <div class="dropdown">
+          <div style="margin-left: 33px; color: white; font-size: 10px">
+            GOAL
           </div>
+          <button class="dropbtn">Show All
+            <i class="i" style="margin-left: 15px;"></i>
+          </button>
+          <div class="dropdown-content" style="margin-left: 30px;">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
       </div>
       <div class="columnA">
-        <!-->
-        <select name="recent">
-          <option value="">
-            Most Recent
-          </option>
-          <option value="value1">
-            Value1
-          </option>
-          <option value="value1">
-            Value2
-          </option>
-          <option value="value1">
-            Value3
-          </option>
-        </select>
-        <-->
-          <div class="dropdown">
-            <div style="margin-left: 33px; color: white; font-size: 10px">
-              SORT BY
-            </div>
-            <button class="dropbtn">Most Recent
-              <i class="i" style="margin-left: 15px;"></i>
-            </button>
-            <div class="dropdown-content" style="margin-left: 30px">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+        <div class="dropdown">
+          <div style="margin-left: 33px; color: white; font-size: 10px">
+            SORT BY
           </div>
+          <button class="dropbtn">Most Recent
+            <i class="i" style="margin-left: 15px;"></i>
+          </button>
+          <div class="dropdown-content" style="margin-left: 30px">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
       </div>
       <div class="row" style="padding-top:25px;">
-        <!-->
-        <input type="text" size="120" style="margin-top: 50px; padding: 15px; background-color: grey">
-        <-->
-          <div class="box">
-            <h6 class="mytext" style="padding-top: 8px">
-              My Models > [Model for projectX]
-            </h6>
-            <div class="mytext" style="float:right; ">
-              <span *ngIf="itemSelected>0" style="margin-right: 25px;">
-                {{itemSelected}} Selected
-              </span>
-              <span>
-                <a (click)="myconfirm()">
-                  <i class="material-icons" style="margin-top:5px;">&#xe2c7;</i>
-                </a>
-              </span>
-              <span *ngIf="itemSelected==0">
-                &nbsp;&nbsp;
-                <a href="#" class="dropbtn1">Create New Model</a>
-              </span>
-              <span *ngIf="itemSelected>0">
-                &nbsp;&nbsp;
-                <!-->
-                <a href="#" class="dropbtn1">Actions </a>
-                <-->
-                  <div class="dropdown">
-                    <button class="boxdropbtn" style="background-color: aqua; text-align: center;">Actions
-                      <i class="i" style="margin-left: 15px; color: white;"></i>
-                    </button>
-                    <div class="dropdown-content" style="margin-left: 30px">
-                      <a (click)="showConfirm()">Move to...</a>
-                      <a href="#">Deselect All</a>
-                    </div>
-                  </div>
-              </span>
-              <!-->
-              <span *ngIf="itemSelected > 0">
-                &nbsp;&nbsp; *ngIf="itemitemSelected == 0"
-                <a href="#" class="dropbtn1">Actions</a>
-              </span>
-              <-->
-            </div>
+        <div class="box">
+          <h6 class="mytext" style="padding-top: 8px">
+            My Models > [Model for projectX]
+          </h6>
+          <div class="mytext" style="float:right; ">
+            <span *ngIf="itemSelected>0" style="margin-right: 25px;">
+              {{itemSelected}} Selected
+            </span>
+            <span>
+              <a (click)="createFolder()">
+                <i class="material-icons" style="margin-top:5px;">&#xe2c7;</i>
+              </a>
+            </span>
+            <span *ngIf="itemSelected==0">
+              &nbsp;&nbsp;
+              <a href="#" class="dropbtn1">Create New Model</a>
+            </span>
+            <span *ngIf="itemSelected>0">
+              &nbsp;&nbsp;
+              <div class="dropdown">
+                <button class="boxdropbtn" style="background-color: aqua; text-align: center;">Actions
+                  <i class="i" style="margin-left: 15px; color: white;"></i>
+                </button>
+                <div class="dropdown-content" style="margin-left: 30px">
+                  <a (click)="modalDialog()">Move to...</a>
+                  <a href="#">Deselect All</a>
+                </div>
+              </div>
+            </span>
           </div>
+        </div>
       </div>
       <div class="row" style="padding-top: 5px;margin-left: 1px;">
         <div class="columnC">
           <a href="#">
             <div class="card">
               <b>
-                <input type="checkbox" (click)="myfunct();" name="mycheck" style="margin-left: 5px;">
+                <input type="checkbox" (click)="checkSelected();" name="mycheck" style="margin-left: 5px;">
               </b>
               <b>
                 <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
@@ -150,15 +103,9 @@
                 </h5>
                 <h5 style="color: white">
                   <span>
-                    <!-- <i class="fa fa-check" aria-hidden="true"></i><-->
                     projectX Model 1
                   </span>
-                  <!-->
-                  <span>
-                    <i class="fa fa-ellipsis-v"></i>
-                  </span>
-                  <-->
-                    <br> InterValues
+                  <br> InterValues
                 </h5>
                 <p style="color: grey">
                   Last Modified
@@ -172,7 +119,7 @@
           <a href="#">
             <div class="card">
               <b>
-                <input type="checkbox" (click)="myfunct()" style="margin-left: 5px;" name="mycheck">           
+                <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
               </b>
               <b>
                 <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
@@ -197,17 +144,10 @@
                   </span>
                 </h5>
                 <h5 style="color: white">
-
                   <span>
-                    <!-- <i class="fa fa-check" aria-hidden="true"></i><-->
                     projectX Model 2
                   </span>
-                  <!-->
-                  <span>
-                    <i class="fa fa-ellipsis-v"></i>
-                  </span>
-                  <-->
-                    <br> InterValues
+                  <br> InterValues
                 </h5>
                 <p style="color: grey">
                   Last Modified
@@ -249,4 +189,4 @@
         </div>
       </div>
     </div>
-  </div>
+</div>

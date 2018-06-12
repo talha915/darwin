@@ -11,16 +11,16 @@ import { DialogueCreateComponent } from '../dialoguecreate/dialoguecreate.compon
 export class RightbodyComponent implements OnInit {
   private itemSelected:number = 0;
   constructor(private dialogService:DialogService) {}
-  showConfirm() {
+  modalDialog() {
     let disposable = this.dialogService.addDialog(DialogueComponentComponent); 
     
   }
-  myconfirm() {
+  createFolder() {
     let disposable = this.dialogService.addDialog(DialogueCreateComponent); 
   }
   ngOnInit() {
   }
-  myfunct(){
+  checkSelected(){
     this.itemSelected= this.itemSelected + 1;
     if(this.itemSelected>2){
       this.itemSelected--;
