@@ -8,6 +8,7 @@ import { RightbodyComponent } from './rightbody/rightbody.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DialogueComponentComponent } from './dialogue-component/dialogue-component.component';
 import { DialogueCreateComponent } from './dialoguecreate/dialoguecreate.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DialogueCreateComponent } from './dialoguecreate/dialoguecreate.compone
     DropdownComponent,
     DialogueComponentComponent,
     DialogueCreateComponent,
+    CardComponent,
    
   ],
   imports: [

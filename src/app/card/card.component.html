@@ -1,0 +1,41 @@
+<div class="columnC">
+  <a href="#">
+    <div class="card" *ngFor="let data of cardData">
+      <b>
+        <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
+      </b>
+      <b>
+        <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
+          <a>
+            <i class="fa fa-ellipsis-v" style="float: right; color: white;"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="#">{{data.link1}}</a>
+            <a href="#">{{data.link2}}</a>
+            <a href="#">{{data.link3}}</a>
+          </div>
+        </div>
+      </b>
+      <div class="container">
+        <h5 style="float: right; color: white; padding-top: 60px;">
+          <span>
+            {{data.percentage}}
+          </span>
+          <span>
+            <br>{{data.accuracy}}
+          </span>
+        </h5>
+        <h5 style="color: white">
+          <span>
+            {{data.Model}}
+          </span>
+          <br> {{data.InterValues}}
+        </h5>
+        <p style="color: grey">
+          {{data.footer}}
+          <br>{{data.footerDate}}
+        </p>
+      </div>
+    </div>
+  </a>
+</div>

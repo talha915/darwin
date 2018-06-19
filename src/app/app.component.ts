@@ -7,7 +7,7 @@ import { DialogueComponentComponent } from './dialogue-component/dialogue-compon
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  
+ // template: `<app-card></app-card>`
 })
 export class AppComponent {
   constructor(private dialogService:DialogService) {}

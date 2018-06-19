@@ -73,8 +73,8 @@
           </div>
         </div>
       </div>
-      <div class="row" style="padding-top: 5px;margin-left: 1px;">
-        <div class="columnC">
+      <div class="row" style="padding-top: 5px;margin-left: 0px;">
+        <!-- <div class="columnC">
           <a href="#">
             <div class="card">
               <b>
@@ -114,10 +114,10 @@
               </div>
             </div>
           </a>
-        </div>
+        </div> -->
         <div class="columnC">
-          <a href="#">
-            <div class="card">
+          <!-- <a href="#">
+            <div class="card" >
               <b>
                 <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
               </b>
@@ -155,7 +155,8 @@
                 </p>
               </div>
             </div>
-          </a>
+          </a> -->
+          <app-card (messageEvent)="receiveMessage($event)"></app-card>
         </div>
         <div class="columnC">
           <a href="#">
