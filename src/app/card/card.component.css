@@ -7,7 +7,7 @@
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
     .columnC{
-        width: 25% !important;
+        width: 100% !important;
     }
 }
 
@@ -18,7 +18,7 @@
         height: 1000px;
     }
     .columnC{
-        width: 50% !important;
+        width: 100% !important;
     }
 }
 
@@ -27,7 +27,7 @@
         height: 1000px;
     }
     .columnC{
-        width: 30% !important;
+        width: 100% !important;
     }
 }
 
@@ -36,7 +36,7 @@
        height: 680px;
     }
     .columnC{
-        width: 25% !important;
+        width: 100% !important;
     }
 }
 
@@ -110,7 +110,7 @@ a:link {
 }
 
 .columnC{
-    width: 250px;
+    width: 100%;
     display: inline-block;
 }
 
@@ -274,4 +274,9 @@ a{
 
 input[type="checkbox"] .card{
     border: 3px solid gold;
+}
+
+.cardrow{
+    width: 25%;
+    display: inline-block;
 }

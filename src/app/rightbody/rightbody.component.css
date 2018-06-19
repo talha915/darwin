@@ -27,7 +27,7 @@
         height: 1000px;
     }
     .columnC{
-        width: 30% !important;
+        width: 100% !important;
     }
 }
 
@@ -36,7 +36,7 @@
        height: 680px;
     }
     .columnC{
-        width: 25% !important;
+        width: 100% !important;
     }
 }
 

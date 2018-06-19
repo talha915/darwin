@@ -1,41 +1,56 @@
 <div class="columnC">
-  <a href="#">
-    <div class="card" *ngFor="let data of cardData">
-      <b>
-        <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
-      </b>
-      <b>
-        <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
-          <a>
-            <i class="fa fa-ellipsis-v" style="float: right; color: white;"></i>
-          </a>
-          <div class="dropdown-content">
-            <a href="#">{{data.link1}}</a>
-            <a href="#">{{data.link2}}</a>
-            <a href="#">{{data.link3}}</a>
+  <a href="#" *ngFor="let data of cardData" class="cardrow">
+    <div *ngIf="data.link1">
+      <div class="card">
+        <b>
+          <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
+        </b>
+        <b>
+          <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
+            <a>
+              <i class="fa fa-ellipsis-v" style="float: right; color: white;"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">{{data.link1}}</a>
+              <a href="#">{{data.link2}}</a>
+              <a href="#">{{data.link3}}</a>
+            </div>
           </div>
+        </b>
+        <div class="container">
+          <h5 style="float: right; color: white; padding-top: 60px;">
+            <span>
+              {{data.percentage}}
+            </span>
+            <span>
+              <br>{{data.accuracy}}
+            </span>
+          </h5>
+          <h5 style="color: white">
+            <span>
+              {{data.Model}}
+            </span>
+            <br> {{data.InterValues}}
+          </h5>
+          <p style="color: grey">
+            {{data.footer}}
+            <br>{{data.footerDate}}
+          </p>
         </div>
-      </b>
-      <div class="container">
-        <h5 style="float: right; color: white; padding-top: 60px;">
-          <span>
-            {{data.percentage}}
-          </span>
-          <span>
-            <br>{{data.accuracy}}
-          </span>
-        </h5>
-        <h5 style="color: white">
-          <span>
-            {{data.Model}}
-          </span>
-          <br> {{data.InterValues}}
-        </h5>
-        <p style="color: grey">
-          {{data.footer}}
-          <br>{{data.footerDate}}
-        </p>
       </div>
+    </div>
+    <div *ngIf="data.title">
+        <div class="card" style="display: inline-block; padding-top: 2px;">
+            <div class="container">
+              <h4 style="color: white; ">
+                <i class="material-icons">&#xe2c7;</i>
+                {{data.title}}
+              </h4>
+              <p style="color: white; padding-top: 66px;">
+                {{data.footer}}
+              </p>
+            </div>
+          </div>
     </div>
   </a>
 </div>

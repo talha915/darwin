@@ -22,7 +22,7 @@ export class CardComponent implements OnInit {
     if(this.itemSelected>2){
       this.itemSelected--;
     }
-    if(this.itemSelected>0){
+    if(this.itemSelected>=0){
       this.sendMessage();
     }
     console.log("From Card Component",this.itemSelected);

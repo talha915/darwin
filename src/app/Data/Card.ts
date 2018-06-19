@@ -23,4 +23,12 @@ export const Card=[
         footer: 'Last Modified',
         footerDate: 'April 8, 2018' 
     },
+    {
+        title: 'Folder 1',
+        footer: '3 Models 1 Folders'
+    },
+    {
+        title: 'Folder 2',
+        footer: '1 Models'
+    }
 ];
