@@ -10,21 +10,23 @@ import { CardComponent } from '../card/card.component';
   styleUrls: ['./rightbody.component.css']
 })
 export class RightbodyComponent implements OnInit {
-
+  private itemSelected:number=0;
+  
   constructor(private dialogService:DialogService) {}
-  modalDialog() {
-    let disposable = this.dialogService.addDialog(DialogueComponentComponent); 
-    
+  
+  ngOnInit() {
   }
+
+  modalDialog() {
+    let disposable = this.dialogService.addDialog(DialogueComponentComponent);   
+  }
+
   createFolder() {
     let disposable = this.dialogService.addDialog(DialogueCreateComponent); 
   }
-  ngOnInit() {
-  }
- 
-  itemSelected:number;
-
+  
   receiveMessage($event) {
+
     this.itemSelected = $event
     console.log("Message: ", this.itemSelected);
   }

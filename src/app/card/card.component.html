@@ -1,9 +1,9 @@
 <div class="columnC">
-  <a href="#" *ngFor="let data of cardData" class="cardrow">
+  <a href="#" *ngFor="let data of cardData" class="cardrow"  [ngClass]="{'selectedCard':isChecked(data)}">
     <div *ngIf="data.link1">
       <div class="card">
         <b>
-          <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
+          <input type="checkbox" [disabled]="isChecked(data)" (click)="checkSelected(data)" style="margin-left: 5px;" name="mycheck">
         </b>
         <b>
           <div class="dropdown" style="float: right; color: white; margin-top: 4px;">

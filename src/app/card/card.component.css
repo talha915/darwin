@@ -280,3 +280,14 @@ input[type="checkbox"] .card{
     width: 25%;
     display: inline-block;
 }
+
+
+.selectedCard b{
+    opacity: 1;
+}
+.selectedCard b i {
+    opacity: 1;
+}
+.selectedCard .card{
+    border: 1px solid rgb(139, 131, 8);
+}
