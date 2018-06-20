@@ -7,7 +7,7 @@
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
     .columnC{
-        width: 25% !important;
+        width: 100% !important;
     }
 }
 
@@ -18,7 +18,7 @@
         height: 1000px;
     }
     .columnC{
-        width: 50% !important;
+        width: 100% !important;
     }
 }
 

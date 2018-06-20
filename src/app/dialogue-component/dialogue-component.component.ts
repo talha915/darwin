@@ -8,6 +8,8 @@ import { Data } from '../Data/Folder';
 })
 export class DialogueComponentComponent extends DialogComponent<null, null> implements OnInit{
   folders: Array<any>=Data;
+  public list: number[] = [];
+
   constructor(dialogService: DialogService) {
     super(dialogService);
   }
@@ -17,6 +19,11 @@ export class DialogueComponentComponent extends DialogComponent<null, null> impl
     this.close();
   }
   ngOnInit() {
+    
   }
 
+  clickIcon(data){
+    // Toggle Visible state
+    data.visible=! data.visible;
+  }
 }
