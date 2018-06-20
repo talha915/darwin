@@ -17,7 +17,7 @@
             <li *ngFor="let items of list">      
               <i *ngIf="!items.visible" class="fa fa-plus-square" (click)="clickIcon(items)" style="font-size: 12px; float: left; padding-top: 5px; padding-right: 15px"></i>
               <i *ngIf="items.visible" class="fa fa-minus-square" (click)="clickIcon(items)" style="font-size: 12px; float: left; padding-top: 5px; padding-right: 15px"></i>
-              <i class="material-icons" style="color: white; font-size: 12px; padding-right: 5px">&#xe2c7;</i>{{items.name}}
+              <i class="material-icons" style="color: white; font-size: 12px; padding-right: 5px">&#xe2c7;</i><span tabindex="1" >{{items.name}}</span>
               <div *ngIf="items.childs.length > 0 && items.visible">
                 <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: items.childs}"></ng-container>
               </div>

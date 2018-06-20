@@ -25,5 +25,10 @@ export class DialogueComponentComponent extends DialogComponent<null, null> impl
   clickIcon(data){
     // Toggle Visible state
     data.visible=! data.visible;
+    console.log(data)
+  }
+
+  folderSelected(data){
+    console.log("Working folder");
   }
 }
