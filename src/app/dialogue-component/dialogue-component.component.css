@@ -82,7 +82,6 @@ a{
     cursor: pointer;
 }
 
-span:focus {
-    background-color:gold;
-    width: 250px;
+li:focus {
+    background-color:rgb(5, 95, 10);
 }
