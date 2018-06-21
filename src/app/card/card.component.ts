@@ -9,7 +9,8 @@ import { Card } from '../Data/Card';
 export class CardComponent implements OnInit {
   cardData: Array<any> = Card;
 
-  public list: number[]=[];  
+  public list: number[]=[]; 
+  filter: boolean= false; 
   constructor() { }
 
   ngOnInit() {
@@ -23,6 +24,34 @@ export class CardComponent implements OnInit {
       return this.list.length;
   }
   
+  uncheckSelected(index){
+    this.list.splice(index,1);
+    this.sendMessage();
+    return this.list.length;
+  }
+
+  filterData(data){
+    var check=this.list.indexOf(data)
+    if(check!=-1){
+      this.uncheckSelected(check);
+      console.log("Valid");
+    }
+    else{
+      this.checkSelected(data);
+      console.log("Invalid");
+
+    }
+    // this.filter=!this.filter;
+    // if(this.filter==true){
+    //   this.checkSelected(data);
+    //   console.log("Checked");
+      
+    // }
+    // else{
+    //   console.log("Unchecked");
+    // }
+  }  
+
   @Output() messageEvent = new EventEmitter<number>();
 
   sendMessage() {

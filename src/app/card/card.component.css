@@ -292,3 +292,7 @@ input[type="checkbox"] .card{
 .selectedCard .card{
     border: 1px solid rgb(139, 131, 8);
 }
+
+.notselectedCard .card{
+    border: none;
+}

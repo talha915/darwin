@@ -82,6 +82,11 @@ a{
     cursor: pointer;
 }
 
-li:focus {
-    background-color:rgb(5, 95, 10);
+span:focus {
+    background-color:rgb(98, 126, 134);
+    outline: 0px solid transparent;
+}
+
+span:hover{
+    background-color: rgb(124, 153, 125);
 }
