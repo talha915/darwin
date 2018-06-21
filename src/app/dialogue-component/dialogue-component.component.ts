@@ -9,6 +9,7 @@ import { Data } from '../Data/Folder';
 export class DialogueComponentComponent extends DialogComponent<null, null> implements OnInit{
   folders: Array<any>=Data;
   public list: number[] = [];
+  private selectedFolder:number;
 
   constructor(dialogService: DialogService) {
     super(dialogService);
@@ -29,6 +30,8 @@ export class DialogueComponentComponent extends DialogComponent<null, null> impl
   }
 
   folderSelected(data){
-    console.log("Working folder");
+    this.selectedFolder = data.id
+    
+    console.log("Working folder", this.selectedFolder);
   }
 }
