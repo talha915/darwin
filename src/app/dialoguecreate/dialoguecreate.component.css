@@ -43,7 +43,36 @@
     -o-transform: translate(0,-25%);
     transform: translate(0,-25%);
 }
- 
+
+span{
+    color: white;
+}
+
+h4{
+    padding-left: 15px;
+}
+
+a{
+    margin-left: 290px;
+    color: white; 
+}
+
+.textStyle{
+    margin-left: 25px;
+}
+
+.textfieldStyle{
+    border-radius: 2px
+}
+
+.modalcontentStyle{
+    margin-top: 60px;
+}
+
+.modalheaderStyle{
+    background-color: gray; 
+}
+
 @media (min-width: 768px) {
     .modal-dialog {
         width: 500px;

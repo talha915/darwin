@@ -40,6 +40,7 @@
     }
 }
 
+
 @media only screen and (max-width: 767px) {
     /* phones */
     .rightbody{
@@ -54,6 +55,9 @@
     .columnC{
         width: 100% !important;
     }
+    .inputStyle{
+        width: 80% !important;
+    }
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait){
@@ -66,6 +70,7 @@
     .columnC{
         width: 100% !important;
     }
+    
 }
 
 h3{
@@ -73,6 +78,7 @@ h3{
 }
 .row{
     clear: both; 
+    padding-top:25px;
 }
 
 .columnA{
@@ -122,6 +128,8 @@ a:link {
 .container .span{
     padding-top: 1px;
 }
+
+
 
 .dropbtn {
     background-color: #372354;
@@ -197,11 +205,39 @@ a:link {
     padding-bottom: 45px;
 }
 
-.mytext{
+.boxtext{
     color: white;
     margin-top: 1px;
     padding-left: 15px;
     float: left;
+    
+}
+
+.boxtextbutton{
+    float:right;
+}
+
+.boxtextStyle{
+    padding-top: 8px !important;
+}
+
+.boxtextselectedItem{
+    
+    margin-right: 25px;
+}
+
+.createfoldericon{
+    margin-top:5px;
+}
+
+.actionbutton{
+    background-color: aqua; 
+    text-align: center;
+}
+
+.actionbuttonicon{
+    margin-left: 15px; 
+    color: white;
 }
 
 select {
@@ -229,6 +265,14 @@ input[type=text]{
     box-sizing: border-box;
 }
 
+.inputStyle{
+    margin-top: 22px !important; 
+    border: none;
+    background-color: gray; 
+    color: white ; 
+    height: 10px
+}
+
 .inputWithIcon{
     position:relative;
 }
@@ -241,6 +285,7 @@ input[type=text]{
     margin-left: 185px;
     color:#aaa;
     transition:.3s;
+    padding-top: 18px;
 }
 
 .i{
@@ -252,6 +297,20 @@ input[type=text]{
     -webkit-transform: rotate(45deg);
 }
 
+.dropdownStyle{
+    margin-left: 33px; 
+    color: white; 
+    font-size: 10px;
+}
+
+.dropdownIcon{
+    margin-left: 15px !important;
+}
+
+.dropdownContentStyle{
+    margin-left: 30px;
+}
+
 .boxdropbtn {
     background-color: aqua;
     color: white;
@@ -260,6 +319,12 @@ input[type=text]{
     margin-right: 15px;
     padding: 6px;
 }
+
+.cardrow{
+    padding-top: 5px;
+    margin-left: 0px;
+}
+
 .material-icons{
     font-size: 18px;
 }

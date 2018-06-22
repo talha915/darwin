@@ -30,6 +30,35 @@
     }
 }
 
+.modalcontentStyle{
+    margin-top: 120px;
+}
+
+.modalheaderStyle{
+    background-color: gray;
+}
+
+.modaltitleStyle{
+    text-align: center;
+    color: white;
+}
+
+a{
+    margin-left: 350px;
+    color: white;
+}
+
+.iconStyle{
+    font-size: 12px; 
+    padding-top: 5px; 
+    padding-right: 15px
+}
+
+.folderimageStyle{
+    width:15px; 
+    height:10px;
+}
+
 .cancelbutton{
     background-color: darkslateblue;
     color: black;

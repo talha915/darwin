@@ -2,11 +2,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <div class="modal-dialog">
-  <div class="modal-content" style="margin-top: 150px">
-    <div class="modal-header" style="background-color: gray">
+  <div class="modal-content modalcontentStyle" >
+    <div class="modal-header modalheaderStyle" >
       <span>
-        <h4 class="modal-title" style="text-align: center;color: white;">Move x Components to...
-          <a class="close" style="margin-left: 350px;color: white; " (click)="close()">&times;</a>
+        <h4 class="modal-title modaltitleStyle" >Move x Components to...
+          <a class="close" (click)="close()">&times;</a>
         </h4>
       </span>
     </div>
@@ -16,10 +16,10 @@
           <ul style="color: white">
             <li *ngFor="let items of list" tabindex="1" >
               <span class="span" [ngClass]="{'active':items.id == selectedFolder}" (click)="folderSelected(items)">
-                <i *ngIf="items.childs.length>0 && !items.visible" class="fa fa-plus-square" (click)="clickIcon(items)" style="font-size: 12px; padding-top: 5px; padding-right: 15px"></i>
-                <i *ngIf="!items.childs.length>0 || items.visible" class="fa fa-minus-square" (click)="clickIcon(items)" style="font-size: 12px; padding-top: 5px; padding-right: 15px"></i>
-                <img *ngIf="items.childs.length>0 && !items.visible" src="../../assets/images/closedfolder.svg" width="15" height="10">
-                <img *ngIf="!items.childs.length>0 || items.visible" src="../../assets/images/openedfolder.svg" width="15" height="10" > 
+                <i *ngIf="items.childs.length>0 && !items.visible" class="fa fa-plus-square iconStyle" (click)="clickIcon(items)" ></i>
+                <i *ngIf="!items.childs.length>0 || items.visible" class="fa fa-minus-square iconStyle" (click)="clickIcon(items)" ></i>
+                <img *ngIf="items.childs.length>0 && !items.visible" src="../../assets/images/closedfolder.svg" class="folderimageStyle">
+                <img *ngIf="!items.childs.length>0 || items.visible" src="../../assets/images/openedfolder.svg" class="folderimageStyle" > 
                 {{items.name}}
               </span>
               <div *ngIf="items.childs.length > 0 && items.visible">

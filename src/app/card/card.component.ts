@@ -30,7 +30,7 @@ export class CardComponent implements OnInit {
     return this.list.length;
   }
 
-  filterData(data){
+  checkedCard(data){
     var check=this.list.indexOf(data)
     if(check!=-1){
       this.uncheckSelected(check);

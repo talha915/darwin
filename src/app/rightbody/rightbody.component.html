@@ -6,19 +6,19 @@
     <div class="row">
       <div class="columnA">
         <div class="inputWithIcon">
-          <input type="text" style="margin-top: 25px; border: none; background-color: gray; color: white ; height: 10px" placeholder="Search Models">
-          <i class="fa fa-search" style="padding-top: 20px;"></i>
+          <input type="text" class="inputStyle" placeholder="Search Models">
+          <i class="fa fa-search" ></i>
         </div>
       </div>
       <div class="columnA">
         <div class="dropdown">
-          <div style="margin-left: 33px; color: white; font-size: 10px">
+          <div class="dropdownStyle">
             GOAL
           </div>
           <button class="dropbtn">Show All
-            <i class="i" style="margin-left: 15px;"></i>
+            <i class="i dropdownIcon"></i>
           </button>
-          <div class="dropdown-content" style="margin-left: 30px;">
+          <div class="dropdown-content dropdownContentStyle">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
@@ -27,31 +27,31 @@
       </div>
       <div class="columnA">
         <div class="dropdown">
-          <div style="margin-left: 33px; color: white; font-size: 10px">
+          <div class="dropdownStyle">
             SORT BY
           </div>
           <button class="dropbtn">Most Recent
-            <i class="i" style="margin-left: 15px;"></i>
+            <i class="i dropdownIcon"></i>
           </button>
-          <div class="dropdown-content" style="margin-left: 30px">
+          <div class="dropdown-content dropdownContentStyle">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
           </div>
         </div>
       </div>
-      <div class="row" style="padding-top:25px;">
+      <div class="row">
         <div class="box">
-          <h6 class="mytext" style="padding-top: 8px">
+          <h6 class="boxtext boxtextStyle">
             My Models > [Model for projectX]
           </h6>
-          <div class="mytext" style="float:right; ">
-            <span *ngIf="itemSelected>0" style="margin-right: 25px;">
+          <div class="boxtext boxtextbutton">
+            <span *ngIf="itemSelected>0" class="boxtextselectedItem">
               {{itemSelected}} Selected
             </span>
             <span>
               <a (click)="createFolder()">
-                <i class="material-icons" style="margin-top:5px;">&#xe2c7;</i>
+                <i class="material-icons createfoldericon">&#xe2c7;</i>
               </a>
             </span>
             <span *ngIf="itemSelected==0">
@@ -61,10 +61,10 @@
             <span *ngIf="itemSelected>0">
               &nbsp;&nbsp;
               <div class="dropdown">
-                <button class="boxdropbtn" style="background-color: aqua; text-align: center;">Actions
-                  <i class="i" style="margin-left: 15px; color: white;"></i>
+                <button class="boxdropbtn actionbutton">Actions
+                  <i class="i actionbuttonicon"></i>
                 </button>
-                <div class="dropdown-content" style="margin-left: 30px">
+                <div class="dropdown-content dropdownContentStyle">
                   <a (click)="modalDialog()">Move to...</a>
                   <a href="#">Deselect All</a>
                 </div>
@@ -73,121 +73,10 @@
           </div>
         </div>
       </div>
-      <div class="row" style="padding-top: 5px;margin-left: 0px;">
-        <!-- <div class="columnC">
-          <a href="#">
-            <div class="card">
-              <b>
-                <input type="checkbox" (click)="checkSelected();" name="mycheck" style="margin-left: 5px;">
-              </b>
-              <b>
-                <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
-                  <a>
-                    <i class="fa fa-ellipsis-v" style="float: right; color: white;"></i>
-                  </a>
-                  <div class="dropdown-content">
-                    <a href="#">Move To</a>
-                    <a href="#">Rename</a>
-                    <a href="#">Remove</a>
-                  </div>
-                </div>
-              </b>
-              <div class="container">
-                <h5 style="float: right; color: white; padding-top: 60px;">
-                  <span>
-                    89.43%
-                  </span>
-                  <span>
-                    <br>Accuracy
-                  </span>
-                </h5>
-                <h5 style="color: white">
-                  <span>
-                    projectX Model 1
-                  </span>
-                  <br> InterValues
-                </h5>
-                <p style="color: grey">
-                  Last Modified
-                  <br>April 8, 2018
-                </p>
-              </div>
-            </div>
-          </a>
-        </div> -->
-        <div class="columnC" style="float: left">
-          <!-- <a href="#">
-            <div class="card" >
-              <b>
-                <input type="checkbox" (click)="checkSelected()" style="margin-left: 5px;" name="mycheck">
-              </b>
-              <b>
-                <div class="dropdown" style="float: right; color: white; margin-top: 4px;">
-                  <a>
-                    <i class="fa fa-ellipsis-v" style="float: right; color: white;"></i>
-                  </a>
-                  <div class="dropdown-content">
-
-                    <a href="#">Move To</a>
-                    <a href="#">Rename</a>
-                    <a href="#">Remove</a>
-                  </div>
-                </div>
-              </b>
-              <div class="container">
-                <h5 style="float: right; color: white; padding-top: 60px;">
-                  <span>
-                    89.43%
-                  </span>
-                  <span>
-                    <br>Accuracy
-                  </span>
-                </h5>
-                <h5 style="color: white">
-                  <span>
-                    projectX Model 2
-                  </span>
-                  <br> InterValues
-                </h5>
-                <p style="color: grey">
-                  Last Modified
-                  <br>April 8, 2018
-                </p>
-              </div>
-            </div>
-          </a> -->
+      <div class="row cardrow">
+        <div class="columnC">
           <app-card (messageEvent)="receiveMessage($event)"></app-card>
         </div>
-        <!-- <div class="columnC">
-          <a href="#">
-            <div class="card" style="display: inline-block; padding-top: 2px;">
-              <div class="container">
-                <h4 style="color: white; ">
-                  <i class="material-icons">&#xe2c7;</i>
-                  Folder 1
-                </h4>
-                <p style="color: white; padding-top: 66px;">
-                  3 Models 1 Folders
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="columnC">
-          <a href="#">
-            <div class="card" style=" padding-top: 2px;">
-              <div class="container">
-                <h4 style="color: white">
-                  <i class="material-icons">&#xe2c7;</i>
-                  Folder 2
-                </h4>
-                <p style="color: white; padding-top: 66px;">
-                  1 Models
-                </p>
-              </div>
-            </div>
-          </a>
-        </div> -->
       </div>
     </div>
-</div>
+  </div>

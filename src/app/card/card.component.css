@@ -248,7 +248,49 @@ a:link {
     margin-top:15px;
 }
 
+.checkboxStyle{
+    margin-left: 5px;
+    margin-top: 8px;
+}
 
+.dropdownStyle{
+    float: right; 
+    color: white; 
+    margin-top: 8px;
+}
+
+.iconStyle{
+    float: right; 
+    color: white;
+}
+
+.cardApercentage{
+    float: right; 
+    color: white; 
+    padding-top: 60px;
+}
+
+.cardAFooter{
+    color: grey;
+}
+
+.cardAModel{
+    color: white;
+}
+
+.cardBStyle{
+    display: inline-block; 
+    padding-top: 7px;
+}
+
+.cardBTitleStyle{
+    color: white; 
+}
+
+.cardBFooterStyle{
+    color: white; 
+    padding-top: 66px;
+}
 
 .box{
     background-color: grey;
