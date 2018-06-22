@@ -95,7 +95,7 @@ li:focus ul li{
     background-color: rgb(124, 153, 125);
 } */
 
-span{
+.span{
     display: block;
     width:100%;
     padding-left: 10px;
@@ -107,8 +107,15 @@ li:focus{
 
 span:focus{
     outline: none;
+    width: 80%;
+}
+
+span:hover{
+    background-color: rgb(67, 79, 92);
+    width: 95%;
 }
 
 .active{
-    background-color: red;
+    background-color: lightslategray;
+    width: 95%;
 }

@@ -1,25 +1,73 @@
 .rightbody{
     background-color: #372354;
-    height: 480px;
+    height: 680px;
     
 }
 
-@media only screen and (min-width: 768px) {
-    /* tablets and desktop */
+
+@media only screen and (max-width : 550px)  {
+    /* Styles */
     .columnC{
         width: 100% !important;
+    }
+    .cardrow{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    .columnC{
+        width: 100% !important;
+    }
+    .cardrow{
+        width: 100% !important;
+    }
+}
+@media only screen and (min-width : 600px) {
+    /* Styles */
+    .columnC{
+        width: 100% !important;
+    }
+    .cardrow{
+        width: 50% !important;
+    }
+}
+
+@media only screen  and (min-width : 1224px) {
+    /* Styles */
+    .columnC{
+        width: 100% !important;
+    }
+    .cardrow{
+        width: 25% !important;
+    }
+}
+
+/* @media only screen and (max-width: 638px) {
+    .rightbody{
+        height: 680px !important;
+    }
+    .columnC{
+        width: 100% !important;
+    }
+    .cardrow{
+        width: 25% !important;
     }
     
 }
 
 
 
-@media only screen and (min-width: 794px){
+@media only screen and (max-width: 794px){
     .rightbody{  
         height: 1000px;
     }
     .columnC{
         width: 100% !important;
+    }
+    .cardrow{
+        width: 50% !important;
     }
 }
 
@@ -28,6 +76,9 @@
         height: 1000px;
     }
     .columnC{
+        width: 100% !important;
+    }
+    .cardrow{
         width: 100% !important;
     }
 }
@@ -39,10 +90,13 @@
     .columnC{
         width: 100% !important;
     }
+    .cardrow{
+        width: 100% !important;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-    /* phones */
+    
     .rightbody{
         height: 1000px;
     }
@@ -54,6 +108,9 @@
     }
     .columnC{
         width: 100% !important;
+    }
+    .cardrow{
+        width: 50% !important;
     }
 }
 
@@ -67,7 +124,10 @@
     .columnC{
         width: 100% !important;
     }
-}
+    .cardrow{
+        width: 100% !important;
+    }
+} */
 
 h3{
     color: white;
@@ -112,7 +172,7 @@ a:link {
 
 .columnC{
     width: 100%;
-    display: inline-block;
+    
 }
 
 .container{

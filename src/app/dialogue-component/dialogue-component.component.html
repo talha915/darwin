@@ -15,12 +15,12 @@
         <ng-template #recursiveList let-list>
           <ul style="color: white">
             <li *ngFor="let items of list" tabindex="1" >
-              <span [ngClass]="{'active':items.id == selectedFolder}" (click)="folderSelected(items)">
+              <span class="span" [ngClass]="{'active':items.id == selectedFolder}" (click)="folderSelected(items)">
                 <i *ngIf="items.childs.length>0 && !items.visible" class="fa fa-plus-square" (click)="clickIcon(items)" style="font-size: 12px; padding-top: 5px; padding-right: 15px"></i>
                 <i *ngIf="!items.childs.length>0 || items.visible" class="fa fa-minus-square" (click)="clickIcon(items)" style="font-size: 12px; padding-top: 5px; padding-right: 15px"></i>
                 <img *ngIf="items.childs.length>0 && !items.visible" src="../../assets/images/closedfolder.svg" width="15" height="10">
                 <img *ngIf="!items.childs.length>0 || items.visible" src="../../assets/images/openedfolder.svg" width="15" height="10" > 
-                {{items.name}} {{items.id}}
+                {{items.name}}
               </span>
               <div *ngIf="items.childs.length > 0 && items.visible">
                 <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: items.childs}"></ng-container>
