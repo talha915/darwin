@@ -8,16 +8,17 @@ import { filterQueryId } from '@angular/core/src/view/util';
 
 })
 export class CardComponent implements OnInit {
-  cardData: Array<any> = Card;
 
+  cardData: Array<any> = Card;
   public list: number[] = [];
+  public itemSelected: number = 0;
 
   constructor() { }
 
   ngOnInit() {
 
   }
-  public itemSelected: number = 0;
+
 
   checkSelected(data) {
     this.list.push(data);
@@ -45,18 +46,15 @@ export class CardComponent implements OnInit {
   }
 
   @Output() messageEvent = new EventEmitter<number>();
-
   sendMessage() {
     this.messageEvent.emit(this.list.length)
   }
 
   @Output() foldernameEvent = new EventEmitter<String>();
-  sendfolderName(data){
+  sendfolderName(data) {
     this.foldernameEvent.emit(data);
     console.log(data);
   }
-
-  
 
   checkAgain() {
     console.log("Again", this.itemSelected);
@@ -101,8 +99,6 @@ export class CardComponent implements OnInit {
       return { 'folder': 0, 'model': 0 }
     }
   }
-
-
 
   //   filterArray(data){
   //     if(this.cardData[2].childs.length>0){

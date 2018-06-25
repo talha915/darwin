@@ -1,30 +1,28 @@
 export const Card = [
     {
-        link1: 'Move To',
-        link2: 'Rename',
-        link3: 'Remove',
-        checked: false,
-        percentage: '89.43%',
-        accuracy: 'Accuracy',
-        Model: 'projectX Model 1',
-        InterValues: 'InterValues',
-        footer: 'Last Modified',
-        footerDate: 'April 8, 2018'
+        // link1: 'Move To',
+        // link2: 'Rename',
+        // link3: 'Remove',
+        // checked: false,
+        // percentage: '89.43%',
+        accuracy: '89.43%',
+        //accuracy: 'Accuracy',
+        name: 'projectX Model 1',
+        // InterValues: 'InterValues',
+        // footer: 'Last Modified',
+        footer: 'April 8, 2018',
+        type: 'Models',
+        childs: []
     },
     {
-        link1: 'Move To',
-        link2: 'Rename',
-        link3: 'Remove',
-        checked: false,
-        percentage: '89.43%',
-        accuracy: 'Accuracy',
-        Model: 'projectX Model 2',
-        InterValues: 'InterValues',
-        footer: 'Last Modified',
-        footerDate: 'April 8, 2018'
+        accuracy: '89.43%',
+        name: 'projectX Model 2',
+        footer: 'April 8, 2018',
+        type: 'Models',
+        childs:[]
     },
     {
-        title: 'Folder 1',
+        name: 'Folder 1',
         type: 'Folder',
         childs: [
             {
@@ -37,31 +35,36 @@ export const Card = [
                         childs:[],
                     },
                     
-                ],
-                
+                ],    
             },
             {
                 name: 'DEF',
                 type: 'Models',
+                accuracy: '89.43%',
+                footer: 'April 8, 2018',
                 childs: []
             },
             {
                 name: 'GHI',
                 type: 'Models',
+                accuracy: '89.43%',
+                footer: 'April 8, 2018',
                 childs: []
             },
             {
                 name: 'JKL',
                 type: 'Models',
+                accuracy: '89.43%',
+                footer: 'April 8, 2018',
                 childs: []
             }
         ],
-        footer: '3 Models 1 Folders'
+        //footer: '3 Models 1 Folders'
     },
     {
-        title: 'Folder 2',
+        name: 'Folder 2',
         type: 'Folder',
-        footer: '1 Models',
+        //footer: '1 Models',
         childs:[]
     }
 ];

@@ -1,6 +1,6 @@
 <div class="columnC">
   <a href="#" *ngFor="let data of cardData" class="cardrow" [ngClass]="{'selectedCard':isChecked(data)}" [ngClass]="{'notselectedCard':isChecked(data)}">
-    <div *ngIf="data.link1">
+    <div *ngIf="data.type=='Models'">
       <div class="card">
         <b>
           <input type="checkbox" (click)="checkedCard(data)" class="checkboxStyle" name="checkbox">
@@ -11,40 +11,40 @@
               <i class="fa fa-ellipsis-v iconStyle"></i>
             </a>
             <div class="dropdown-content">
-              <a href="#">{{data.link1}}</a>
-              <a href="#">{{data.link2}}</a>
-              <a href="#">{{data.link3}}</a>
+              <a href="#">Move To</a>
+              <a href="#">Rename</a>
+              <a href="#">Remove</a>
             </div>
           </div>
         </b>
         <div class="container">
           <h5 class="cardApercentage">
             <span>
-              {{data.percentage}}
+              {{data.accuracy}}
             </span>
             <span>
-              <br>{{data.accuracy}}
+              <br>Accuracy
             </span>
           </h5>
           <h5 class="cardAModel">
             <span>
-              {{data.Model}}
+              {{data.name}}
             </span>
-            <br> {{data.InterValues}}
+            <br>InterValues
           </h5>
           <p class="cardAFooter">
-            {{data.footer}}
-            <br>{{data.footerDate}}
+            Last Modified
+            <br>{{data.footer}}
           </p>
         </div>
       </div>
     </div>
-    <div *ngIf="data.title">
-      <div class="card cardBStyle" (click)="sendfolderName(data.title)">
+    <div *ngIf="data.type=='Folder'">
+      <div class="card cardBStyle" (click)="sendfolderName(data.name)">
         <div class="container">
           <h4 class="cardBTitleStyle">
             <i class="material-icons">&#xe2c7;</i>
-            {{data.title}}
+            {{data.name}}
           </h4>
           <p class="cardBFooterStyle">
             {{calculatefooter(data)}}
