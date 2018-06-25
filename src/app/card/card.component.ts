@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Card } from '../Data/Card';
 import { filterQueryId } from '@angular/core/src/view/util';
 @Component({
@@ -9,16 +9,44 @@ import { filterQueryId } from '@angular/core/src/view/util';
 })
 export class CardComponent implements OnInit {
 
-  cardData: Array<any> = Card;
+  // cardData: Array<any> = Card;
   public list: number[] = [];
   public itemSelected: number = 0;
 
   constructor() { }
 
+  @Output() messageEvent = new EventEmitter<number>();
+  sendMessage() {
+    this.messageEvent.emit(this.list.length)
+  }
+
+  @Output() foldernameEvent = new EventEmitter<String>();
+  sendfolderName(data) {
+    this.foldernameEvent.emit(data);
+    console.log(data);
+  }
+
+  @Output() CardEvent = new EventEmitter<any>();
+  sendcardData(data){
+    if(data.length>0){
+      this.CardEvent.emit(data);
+    }
+    
+    //console.log(data)
+  }
+
+  @Output() combineEvent = new EventEmitter<any>();
+  sendCombine(data){
+    if(data.childs.length>0){
+      this.combineEvent.emit(data);
+    }
+  }
+
   ngOnInit() {
 
   }
 
+  @Input() cardData: Array<any>; 
 
   checkSelected(data) {
     this.list.push(data);
@@ -45,17 +73,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-  @Output() messageEvent = new EventEmitter<number>();
-  sendMessage() {
-    this.messageEvent.emit(this.list.length)
-  }
-
-  @Output() foldernameEvent = new EventEmitter<String>();
-  sendfolderName(data) {
-    this.foldernameEvent.emit(data);
-    console.log(data);
-  }
-
+  
   checkAgain() {
     console.log("Again", this.itemSelected);
     console.log("Value from list: ", this.list);

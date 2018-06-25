@@ -26,11 +26,11 @@ export const Card = [
         type: 'Folder',
         childs: [
             {
-                name: 'ABC',
+                name: 'Folder 1.1',
                 type: 'Folder',
                 childs: [
                     {
-                        name: 'Another',
+                        name: 'Folder 1.2',
                         type: 'Folder',
                         childs:[],
                     },

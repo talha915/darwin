@@ -40,7 +40,7 @@
       </div>
     </div>
     <div *ngIf="data.type=='Folder'">
-      <div class="card cardBStyle" (click)="sendfolderName(data.name)">
+      <div class="card cardBStyle" (click)="sendfolderName(data.name); sendcardData(data.childs) ; sendCombine(data)">
         <div class="container">
           <h4 class="cardBTitleStyle">
             <i class="material-icons">&#xe2c7;</i>
