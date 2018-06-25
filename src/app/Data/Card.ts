@@ -1,4 +1,4 @@
-export const Card=[
+export const Card = [
     {
         link1: 'Move To',
         link2: 'Rename',
@@ -9,7 +9,7 @@ export const Card=[
         Model: 'projectX Model 1',
         InterValues: 'InterValues',
         footer: 'Last Modified',
-        footerDate: 'April 8, 2018' 
+        footerDate: 'April 8, 2018'
     },
     {
         link1: 'Move To',
@@ -21,14 +21,37 @@ export const Card=[
         Model: 'projectX Model 2',
         InterValues: 'InterValues',
         footer: 'Last Modified',
-        footerDate: 'April 8, 2018' 
+        footerDate: 'April 8, 2018'
     },
     {
         title: 'Folder 1',
+        type: 'Folder',
+        childs: [
+            {
+                name: 'ABC',
+                type: 'Folder',
+                childs: [
+                    {
+                        name: 'Another',
+                        type: 'Folder',
+                        childs:[],
+                    },
+                    
+                ],
+                
+            },
+            {
+                name: 'DEF',
+                type: 'Models',
+                childs: []
+            }
+        ],
         footer: '3 Models 1 Folders'
     },
     {
         title: 'Folder 2',
-        footer: '1 Models'
+        type: 'Folder',
+        footer: '1 Models',
+        childs:[]
     }
 ];

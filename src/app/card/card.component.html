@@ -1,14 +1,14 @@
 <div class="columnC">
-  <a href="#" *ngFor="let data of cardData" class="cardrow"  [ngClass]="{'selectedCard':isChecked(data)}" [ngClass]="{'notselectedCard':isChecked(data)}">
+  <a href="#" *ngFor="let data of cardData" class="cardrow" [ngClass]="{'selectedCard':isChecked(data)}" [ngClass]="{'notselectedCard':isChecked(data)}">
     <div *ngIf="data.link1">
       <div class="card">
         <b>
-          <input type="checkbox"  (click)="checkedCard(data)" class="checkboxStyle" name="checkbox">
+          <input type="checkbox" (click)="checkedCard(data)" class="checkboxStyle" name="checkbox">
         </b>
         <b>
-          <div class="dropdown dropdownStyle" >
+          <div class="dropdown dropdownStyle">
             <a>
-              <i class="fa fa-ellipsis-v iconStyle" ></i>
+              <i class="fa fa-ellipsis-v iconStyle"></i>
             </a>
             <div class="dropdown-content">
               <a href="#">{{data.link1}}</a>
@@ -40,17 +40,32 @@
       </div>
     </div>
     <div *ngIf="data.title">
-        <div class="card cardBStyle" >
-            <div class="container">
-              <h4 class="cardBTitleStyle">
-                <i class="material-icons">&#xe2c7;</i>
-                {{data.title}}
-              </h4>
-              <p class="cardBFooterStyle">
-                {{data.footer}}
-              </p>
-            </div>
-          </div>
+      <div class="card cardBStyle">
+        <div class="container">
+          <h4 class="cardBTitleStyle">
+            <i class="material-icons">&#xe2c7;</i>
+            {{data.title}}
+          </h4>
+          <p class="cardBFooterStyle">
+            {{calculatefooter(data)}}
+          </p>
+        </div>
+      </div>
     </div>
   </a>
 </div>
+
+<div>
+  <ul>
+    <ng-template #recursiveList let-list>
+      <li *ngFor="let items of list">
+        {{items.name}} {{items.type}}
+        <ul *ngIf="items.childs.length > 0">
+          <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: items.childs }"></ng-container>
+        </ul>
+      </li>
+    </ng-template>
+    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: cardData[2].childs }"></ng-container>
+  </ul> 
+</div>
+
