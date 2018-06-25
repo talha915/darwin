@@ -40,7 +40,7 @@
       </div>
     </div>
     <div *ngIf="data.title">
-      <div class="card cardBStyle">
+      <div class="card cardBStyle" (click)="sendfolderName(data.title)">
         <div class="container">
           <h4 class="cardBTitleStyle">
             <i class="material-icons">&#xe2c7;</i>
@@ -54,18 +54,3 @@
     </div>
   </a>
 </div>
-
-<div>
-  <ul>
-    <ng-template #recursiveList let-list>
-      <li *ngFor="let items of list">
-        {{items.name}} {{items.type}}
-        <ul *ngIf="items.childs.length > 0">
-          <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: items.childs }"></ng-container>
-        </ul>
-      </li>
-    </ng-template>
-    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: cardData[2].childs }"></ng-container>
-  </ul> 
-</div>
-

@@ -220,6 +220,7 @@ a:link {
 
 .boxtextStyle{
     padding-top: 8px !important;
+    cursor: pointer;
 }
 
 .boxtextselectedItem{

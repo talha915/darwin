@@ -44,6 +44,16 @@ export const Card = [
                 name: 'DEF',
                 type: 'Models',
                 childs: []
+            },
+            {
+                name: 'GHI',
+                type: 'Models',
+                childs: []
+            },
+            {
+                name: 'JKL',
+                type: 'Models',
+                childs: []
             }
         ],
         footer: '3 Models 1 Folders'

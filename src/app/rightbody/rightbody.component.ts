@@ -11,7 +11,7 @@ import { CardComponent } from '../card/card.component';
 })
 export class RightbodyComponent implements OnInit {
   private itemSelected:number=0;
-  
+  private folderName: string="";
   constructor(private dialogService:DialogService) {}
   
   ngOnInit() {
@@ -29,5 +29,10 @@ export class RightbodyComponent implements OnInit {
 
     this.itemSelected = $event
     console.log("Message: ", this.itemSelected);
+  }
+
+  receivefolderName($event){
+    this.folderName = $event;
+    console.log("Received", this.folderName);
   }
 }

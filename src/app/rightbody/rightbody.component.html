@@ -43,7 +43,7 @@
       <div class="row">
         <div class="box">
           <h6 class="boxtext boxtextStyle">
-            My Models > [Model for projectX]
+            My Models > [Model for projectX] > {{folderName}}
           </h6>
           <div class="boxtext boxtextbutton">
             <span *ngIf="itemSelected>0" class="boxtextselectedItem">
@@ -75,7 +75,7 @@
       </div>
       <div class="row cardrow">
         <div class="columnC">
-          <app-card (messageEvent)="receiveMessage($event)"></app-card>
+          <app-card (messageEvent)="receiveMessage($event);" (foldernameEvent)="receivefolderName($event)" ></app-card>
         </div>
       </div>
     </div>
