@@ -47,7 +47,7 @@
             <span (click)="breadcrum(0,cardData)">
               > [Model for projectX]
             </span> 
-            <span *ngFor="let items of cardList" (click)="breadcrum(0, items.list)"> > {{items.name}} </span>
+            <span *ngFor="let items of cardList; let i = index;" (click)="breadcrum(i+1, items.list)" > > {{items.name}} </span>
           </h6>
           <div class="boxtext boxtextbutton">
             <span *ngIf="itemSelected>0" class="boxtextselectedItem">

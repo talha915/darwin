@@ -18,6 +18,7 @@ export class RightbodyComponent implements OnInit {
   private cardData: Array<any> = Card;
   private cardList : Array<any>=[];
   private combineList: Array<any>;
+  private cardName:string="";
   constructor(private dialogService:DialogService) {}
   
   ngOnInit() {
@@ -33,7 +34,6 @@ export class RightbodyComponent implements OnInit {
   }
   
   receiveMessage($event) {
-
     this.itemSelected = $event
     console.log("Message: ", this.itemSelected);
   }
@@ -60,5 +60,15 @@ export class RightbodyComponent implements OnInit {
 
   breadcrum(number, list){
     this.rcvcardData = list;
+    console.log("Number",number);
+    
+      //this.cardList.splice(number,this.cardList.length-number);
+    // if(number==0){
+    //   this.cardList.splice(0,1);
+    // }
+    // if(number==1){
+    //   this.cardList.splice(1,2);
+    // }
+    this.cardList.splice(number, this.cardList.length-number);
   }
 }
